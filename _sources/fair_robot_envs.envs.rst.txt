@@ -1,0 +1,35 @@
+fair\_robot\_envs.envs package
+==============================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+Submodules
+----------
+
+fair\_robot\_envs.envs.abstract\_env module
+-------------------------------------------
+
+.. automodule:: fair_robot_envs.envs.abstract_env
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fair\_robot\_envs.envs.bullet\_manipulator module
+-------------------------------------------------
+
+.. automodule:: fair_robot_envs.envs.bullet_manipulator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: fair_robot_envs.envs
+   :members:
+   :undoc-members:
+   :show-inheritance:

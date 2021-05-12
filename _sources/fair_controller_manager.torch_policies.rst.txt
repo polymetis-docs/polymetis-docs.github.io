@@ -1,0 +1,99 @@
+fair\_controller\_manager.torch\_policies package
+=================================================
+
+Policies for robot control in PyTorch.
+
+Note: this module will be deprecated in favor of :code:`torchcontrol`
+once that is stable. In the meantime, the default functionalities
+provided by :code:`RobotInterface` inherit from :code:`ScriptableTorchPolicy` here.
+
+Submodules
+----------
+
+fair\_controller\_manager.torch\_policies.default\_controller module
+--------------------------------------------------------------------
+
+.. automodule:: fair_controller_manager.torch_policies.default_controller
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fair\_controller\_manager.torch\_policies.direct\_torque\_policy module
+-----------------------------------------------------------------------
+
+.. automodule:: fair_controller_manager.torch_policies.direct_torque_policy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fair\_controller\_manager.torch\_policies.dynamics\_controller module
+---------------------------------------------------------------------
+
+.. automodule:: fair_controller_manager.torch_policies.dynamics_controller
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fair\_controller\_manager.torch\_policies.ilqr\_policy module
+-------------------------------------------------------------
+
+.. automodule:: fair_controller_manager.torch_policies.ilqr_policy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fair\_controller\_manager.torch\_policies.joint\_go\_to\_policy module
+----------------------------------------------------------------------
+
+.. automodule:: fair_controller_manager.torch_policies.joint_go_to_policy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fair\_controller\_manager.torch\_policies.op\_space\_controller module
+----------------------------------------------------------------------
+
+.. automodule:: fair_controller_manager.torch_policies.op_space_controller
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fair\_controller\_manager.torch\_policies.pd\_control\_policy module
+--------------------------------------------------------------------
+
+.. automodule:: fair_controller_manager.torch_policies.pd_control_policy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fair\_controller\_manager.torch\_policies.sine\_policy module
+-------------------------------------------------------------
+
+.. automodule:: fair_controller_manager.torch_policies.sine_policy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fair\_controller\_manager.torch\_policies.torch\_policy module
+--------------------------------------------------------------
+
+.. automodule:: fair_controller_manager.torch_policies.torch_policy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fair\_controller\_manager.torch\_policies.tv\_pd\_policy module
+---------------------------------------------------------------
+
+.. automodule:: fair_controller_manager.torch_policies.tv_pd_policy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: fair_controller_manager.torch_policies
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,4 @@
+File fair_controller_manager_server.hpp
+=======================================
+
+.. doxygenfile:: fair_controller_manager_server.hpp

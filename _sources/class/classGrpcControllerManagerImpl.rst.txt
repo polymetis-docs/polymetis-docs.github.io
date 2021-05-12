@@ -1,0 +1,4 @@
+Class GrpcControllerManagerImpl
+===============================
+
+.. doxygenclass:: GrpcControllerManagerImpl

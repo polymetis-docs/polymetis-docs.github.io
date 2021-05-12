@@ -1,0 +1,37 @@
+fair\_robot\_envs package
+=========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   fair_robot_envs.envs
+
+Submodules
+----------
+
+fair\_robot\_envs.grpc\_sim\_client module
+------------------------------------------
+
+.. automodule:: fair_robot_envs.grpc_sim_client
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fair\_robot\_envs.test\_utils module
+------------------------------------
+
+.. automodule:: fair_robot_envs.test_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: fair_robot_envs
+   :members:
+   :undoc-members:
+   :show-inheritance:
