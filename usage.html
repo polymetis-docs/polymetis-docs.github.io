@@ -87,12 +87,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="fair-controller-manager-doc.html">
-   FAIR Controller Manager
+  <a class="reference internal" href="polymetis-doc.html">
+   Polymetis
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="fair-robot-envs-doc.html">
+  <a class="reference internal" href="polysim-doc.html">
    FAIR Robot Environments
   </a>
  </li>
@@ -109,8 +109,8 @@
   </label>
   <ul>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="fair_controller_manager.html">
-     fair_controller_manager package
+    <a class="reference internal" href="polymetis.html">
+     polymetis package
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -119,30 +119,20 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="fair_controller_manager.robot_client.html">
-       fair_controller_manager.robot_client package
+      <a class="reference internal" href="polymetis.robot_client.html">
+       polymetis.robot_client package
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="fair_controller_manager.robot_models.html">
-       fair_controller_manager.robot_models package
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="fair_controller_manager.torch_policies.html">
-       fair_controller_manager.torch_policies package
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="fair_controller_manager.utils.html">
-       fair_controller_manager.utils package
+      <a class="reference internal" href="polymetis.utils.html">
+       polymetis.utils package
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="fair_robot_envs.html">
-     fair_robot_envs package
+    <a class="reference internal" href="polysim.html">
+     polysim package
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
     <label for="toctree-checkbox-3">
@@ -151,8 +141,8 @@
     </label>
     <ul>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="fair_robot_envs.envs.html">
-       fair_robot_envs.envs package
+      <a class="reference internal" href="polysim.envs.html">
+       polysim.envs package
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
       <label for="toctree-checkbox-4">
@@ -311,7 +301,7 @@
 <p><code class="docutils literal notranslate"><span class="pre">launch_robot.py</span></code> is an executable script (which should already be installed in your <code class="docutils literal notranslate"><span class="pre">$CONDA_PREFIX/bin</span></code>) which starts both a controller manager server and a robot client which connects to it, and is installed as a script with the conda package by default. It utilizes <a class="reference external" href="https://hydra.cc/">Hydra</a> configurations to easily swap between simulation and hardware.</p>
 <ul class="simple">
 <li><p>For simulation, the <code class="docutils literal notranslate"><span class="pre">gui</span></code> option controls whether the PyBullet simulation renders, and requires an active display (i.e. you may need to use VNC if <code class="docutils literal notranslate"><span class="pre">ssh</span></code>ing).</p></li>
-<li><p>For hardware, <code class="docutils literal notranslate"><span class="pre">use_real_time</span></code> acquires the necessary <code class="docutils literal notranslate"><span class="pre">sudo</span></code> rights for real-time optimizations (see <a class="reference external" href="https://github.com/fair-robotics/fair-robot-envs/blob/master/fair_controller_manager/include/real_time.hpp">here</a> for details.)</p></li>
+<li><p>For hardware, <code class="docutils literal notranslate"><span class="pre">use_real_time</span></code> acquires the necessary <code class="docutils literal notranslate"><span class="pre">sudo</span></code> rights for real-time optimizations (see <a class="reference external" href="https://github.com/fair-robotics/fair-robot-envs/blob/master/polymetis/include/real_time.hpp">here</a> for details.)</p></li>
 </ul>
 </div>
 <div class="section" id="usage-on-franka-panda-hardware">

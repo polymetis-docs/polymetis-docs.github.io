@@ -11,15 +11,7 @@ torchcontrol.models.torchscript\_pinocchio module
    :members:
    :undoc-members:
    :show-inheritance:
-
-torchcontrol.models.torch\_rnea module
---------------------------------------
-
-.. automodule:: torchcontrol.models.torch_rnea
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
+   
 Module contents
 ---------------
 

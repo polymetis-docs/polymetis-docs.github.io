@@ -87,12 +87,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="fair-controller-manager-doc.html">
-   FAIR Controller Manager
+  <a class="reference internal" href="polymetis-doc.html">
+   Polymetis
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="fair-robot-envs-doc.html">
+  <a class="reference internal" href="polysim-doc.html">
    FAIR Robot Environments
   </a>
  </li>
@@ -109,8 +109,8 @@
   </label>
   <ul class="current">
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="fair_controller_manager.html">
-     fair_controller_manager package
+    <a class="reference internal" href="polymetis.html">
+     polymetis package
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -119,30 +119,20 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="fair_controller_manager.robot_client.html">
-       fair_controller_manager.robot_client package
+      <a class="reference internal" href="polymetis.robot_client.html">
+       polymetis.robot_client package
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="fair_controller_manager.robot_models.html">
-       fair_controller_manager.robot_models package
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="fair_controller_manager.torch_policies.html">
-       fair_controller_manager.torch_policies package
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="fair_controller_manager.utils.html">
-       fair_controller_manager.utils package
+      <a class="reference internal" href="polymetis.utils.html">
+       polymetis.utils package
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="fair_robot_envs.html">
-     fair_robot_envs package
+    <a class="reference internal" href="polysim.html">
+     polysim package
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
     <label for="toctree-checkbox-3">
@@ -151,8 +141,8 @@
     </label>
     <ul>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="fair_robot_envs.envs.html">
-       fair_robot_envs.envs package
+      <a class="reference internal" href="polysim.envs.html">
+       polysim.envs package
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
       <label for="toctree-checkbox-4">
@@ -472,6 +462,32 @@ The API is similar to that of scipy.spatial.transform.Rotation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Identity RotationObj</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="torchcontrol.transform.rotation.quaternion_diff">
+<code class="sig-prename descclassname"><span class="pre">torchcontrol.transform.rotation.</span></code><code class="sig-name descname"><span class="pre">quaternion_diff</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">torch.Tensor</span><a class="headerlink" href="#torchcontrol.transform.rotation.quaternion_diff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the angular error between two quaternions as a 3-dimensional
+axis-angle representation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Underyling implementation uses Eigen::Geometry for quaternions, which
+uses (x, y, z, w) convention instead of (w, x, y z).</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> – quaternion as a 4-dimensional torch.Tensor with (w, x, y, z) convention</p></li>
+<li><p><strong>b</strong> – same as above</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>(a.inverse() * b).as_axis_angle()</cite></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Angular error <cite>a - b</cite>, computed by</p>
 </dd>
 </dl>
 </dd></dl>
@@ -832,6 +848,11 @@ tf.apply(v) = tf.rotation().apply(v) + tf.translation</p>
 </dd>
 </dl>
 </dd></dl>
+
+<dl class="py method">
+<dt id="torchcontrol.transform.transformation.TransformationObj.as_twist">
+<code class="sig-name descname"><span class="pre">as_twist</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">torch.Tensor</span><a class="headerlink" href="#torchcontrol.transform.transformation.TransformationObj.as_twist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt id="torchcontrol.transform.transformation.TransformationObj.inv">

@@ -7,15 +7,10 @@
 git clone git@github.com:fair-robotics/fair-robot-envs
 cd fair-robot-envs
 ```
-3. Install fair-controller-manager using conda
+3. Install polymetis using conda
 ```bash
-conda install -c file://$(eval pwd)/fair_controller_manager/conda/channel \
+conda install -c file://$(eval pwd)/polymetis/conda/channel \
   -c fair-robotics \
   -c conda-forge \
-  fair-controller-manager
+  polymetis
 ```
-4. For simulation support, install fair-robot-envs
-```bash
-pip install -e fair_robot_envs
-```
-

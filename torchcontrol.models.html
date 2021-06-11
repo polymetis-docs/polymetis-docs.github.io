@@ -87,12 +87,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="fair-controller-manager-doc.html">
-   FAIR Controller Manager
+  <a class="reference internal" href="polymetis-doc.html">
+   Polymetis
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="fair-robot-envs-doc.html">
+  <a class="reference internal" href="polysim-doc.html">
    FAIR Robot Environments
   </a>
  </li>
@@ -109,8 +109,8 @@
   </label>
   <ul class="current">
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="fair_controller_manager.html">
-     fair_controller_manager package
+    <a class="reference internal" href="polymetis.html">
+     polymetis package
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -119,30 +119,20 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="fair_controller_manager.robot_client.html">
-       fair_controller_manager.robot_client package
+      <a class="reference internal" href="polymetis.robot_client.html">
+       polymetis.robot_client package
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="fair_controller_manager.robot_models.html">
-       fair_controller_manager.robot_models package
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="fair_controller_manager.torch_policies.html">
-       fair_controller_manager.torch_policies package
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="fair_controller_manager.utils.html">
-       fair_controller_manager.utils package
+      <a class="reference internal" href="polymetis.utils.html">
+       polymetis.utils package
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="fair_robot_envs.html">
-     fair_robot_envs package
+    <a class="reference internal" href="polysim.html">
+     polysim package
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
     <label for="toctree-checkbox-3">
@@ -151,8 +141,8 @@
     </label>
     <ul>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="fair_robot_envs.envs.html">
-       fair_robot_envs.envs package
+      <a class="reference internal" href="polysim.envs.html">
+       polysim.envs package
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
       <label for="toctree-checkbox-4">
@@ -285,11 +275,6 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#module-torchcontrol.models.torch_rnea">
-   torchcontrol.models.torch_rnea module
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#module-torchcontrol.models">
    Module contents
   </a>
@@ -373,295 +358,6 @@ given joint positions and velocities.</p>
 <dd></dd></dl>
 
 </dd></dl>
-
-</div>
-<div class="section" id="module-torchcontrol.models.torch_rnea">
-<span id="torchcontrol-models-torch-rnea-module"></span><h2>torchcontrol.models.torch_rnea module<a class="headerlink" href="#module-torchcontrol.models.torch_rnea" title="Permalink to this headline">¶</a></h2>
-<p>A PyTorch robot model implementing a differentiable
-Recursive Newton-Euler Algorithm (RNEA).</p>
-<p><code class="docutils literal notranslate"><span class="pre">RobotModelTorch</span></code> is an old version of a PyTorch robot model. Too
-slow for real-time control at 1kHz, but still usable in simulation.
-A more updated version is located
-<a class="reference external" href="https://github.com/facebookresearch/differentiable-robot-model">here</a>.</p>
-<dl class="py class">
-<dt id="torchcontrol.models.torch_rnea.CoordinateTransform">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.models.torch_rnea.</span></code><code class="sig-name descname"><span class="pre">CoordinateTransform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trans</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">torch.float32</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.CoordinateTransform" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py attribute">
-<dt id="torchcontrol.models.torch_rnea.CoordinateTransform.compute_quaternion">
-<code class="sig-name descname"><span class="pre">compute_quaternion</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;torch.jit.ScriptFunction</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#torchcontrol.models.torch_rnea.CoordinateTransform.compute_quaternion" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.CoordinateTransform.get_quaternion">
-<code class="sig-name descname"><span class="pre">get_quaternion</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.CoordinateTransform.get_quaternion" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.CoordinateTransform.inverse">
-<code class="sig-name descname"><span class="pre">inverse</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.CoordinateTransform.inverse" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.CoordinateTransform.multiply_transform">
-<code class="sig-name descname"><span class="pre">multiply_transform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinate_transform</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.CoordinateTransform.multiply_transform" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.CoordinateTransform.rotation">
-<code class="sig-name descname"><span class="pre">rotation</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.CoordinateTransform.rotation" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.CoordinateTransform.set_rotation">
-<code class="sig-name descname"><span class="pre">set_rotation</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.CoordinateTransform.set_rotation" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.CoordinateTransform.set_translation">
-<code class="sig-name descname"><span class="pre">set_translation</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.CoordinateTransform.set_translation" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.CoordinateTransform.translation">
-<code class="sig-name descname"><span class="pre">translation</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.CoordinateTransform.translation" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="torchcontrol.models.torch_rnea.Joint">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.models.torch_rnea.</span></code><code class="sig-name descname"><span class="pre">Joint</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">torch.float32</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.Joint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.Joint.set_limits">
-<code class="sig-name descname"><span class="pre">set_limits</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">effort</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.Joint.set_limits" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="torchcontrol.models.torch_rnea.RevoluteJoint">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.models.torch_rnea.</span></code><code class="sig-name descname"><span class="pre">RevoluteJoint</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rot_angles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trans</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">torch.float32</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RevoluteJoint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#torchcontrol.models.torch_rnea.Joint" title="torchcontrol.models.torch_rnea.Joint"><code class="xref py py-class docutils literal notranslate"><span class="pre">torchcontrol.models.torch_rnea.Joint</span></code></a></p>
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RevoluteJoint.update_acc">
-<code class="sig-name descname"><span class="pre">update_acc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qdd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RevoluteJoint.update_acc" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RevoluteJoint.update_state">
-<code class="sig-name descname"><span class="pre">update_state</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RevoluteJoint.update_state" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="torchcontrol.models.torch_rnea.RigidBody">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.models.torch_rnea.</span></code><code class="sig-name descname"><span class="pre">RigidBody</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">torch.float32</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RigidBody" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<p>Representation of the links.</p>
-<dl class="py attribute">
-<dt id="torchcontrol.models.torch_rnea.RigidBody.training">
-<code class="sig-name descname"><span class="pre">training</span></code><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#torchcontrol.models.torch_rnea.RigidBody.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="torchcontrol.models.torch_rnea.RigidBodyInertia">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.models.torch_rnea.</span></code><code class="sig-name descname"><span class="pre">RigidBodyInertia</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">com</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inert_mat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">torch.float32</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RigidBodyInertia" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RigidBodyInertia.get_params">
-<code class="sig-name descname"><span class="pre">get_params</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RigidBodyInertia.get_params" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RigidBodyInertia.multiply_motion_vec">
-<code class="sig-name descname"><span class="pre">multiply_motion_vec</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ang</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RigidBodyInertia.multiply_motion_vec" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="torchcontrol.models.torch_rnea.RigidBodyInertia.training">
-<code class="sig-name descname"><span class="pre">training</span></code><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#torchcontrol.models.torch_rnea.RigidBodyInertia.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.models.torch_rnea.</span></code><code class="sig-name descname"><span class="pre">RobotModelTorch</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">urdf_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynamics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_using_damping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_using_coulomb_friction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">torch.float32</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ee_link_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'iiwa_link_ee'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<p>A robot model able to compute kinematics &amp; dynamics of a robot given an urdf.</p>
-<p>Contains Differentiable Recursive Newton Euler Algorithm (RNEA) directly implemented in PyTorch.</p>
-<p>&#64;author: Franziska Meier (<a class="reference external" href="mailto:fmeier&#37;&#52;&#48;fb&#46;com">fmeier<span>&#64;</span>fb<span>&#46;</span>com</a>) and Giovanni Sutanto (<a class="reference external" href="mailto:gsutanto&#37;&#52;&#48;fb&#46;com">gsutanto<span>&#64;</span>fb<span>&#46;</span>com</a>)</p>
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.compute_jacobian">
-<code class="sig-name descname"><span class="pre">compute_jacobian</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_angles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.compute_jacobian" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.compute_lagrangian_inertia_matrix">
-<code class="sig-name descname"><span class="pre">compute_lagrangian_inertia_matrix</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.compute_lagrangian_inertia_matrix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Inefficient computation of Lagrangian inertia matrix.
-TODO: Implement articulated body algorithm for a more efficient computation!</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.compute_mass_matrix">
-<code class="sig-name descname"><span class="pre">compute_mass_matrix</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_angles</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.compute_mass_matrix" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.compute_non_linear_effects">
-<code class="sig-name descname"><span class="pre">compute_non_linear_effects</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.compute_non_linear_effects" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute the non-linear effects (Coriolis, centrifugal, gravitational, and damping effects).</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.forward">
-<code class="sig-name descname"><span class="pre">forward</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.forward_dynamics">
-<code class="sig-name descname"><span class="pre">forward_dynamics</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.forward_dynamics" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes qdd
-by solving the Euler-Lagrange equation
-qdd = H^{-1} (F - Cv - G - damping_term)</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.forward_kinematics">
-<code class="sig-name descname"><span class="pre">forward_kinematics</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_angles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.forward_kinematics" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.get_coulomb_friction_const">
-<code class="sig-name descname"><span class="pre">get_coulomb_friction_const</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.get_coulomb_friction_const" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.get_damping_const">
-<code class="sig-name descname"><span class="pre">get_damping_const</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.get_damping_const" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.get_dynamics_params">
-<code class="sig-name descname"><span class="pre">get_dynamics_params</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.get_dynamics_params" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.get_joint_angle_limits">
-<code class="sig-name descname"><span class="pre">get_joint_angle_limits</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.get_joint_angle_limits" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.get_joint_damping">
-<code class="sig-name descname"><span class="pre">get_joint_damping</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.get_joint_damping" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.get_joint_effort_limits">
-<code class="sig-name descname"><span class="pre">get_joint_effort_limits</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.get_joint_effort_limits" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.get_joint_lower_angle_limits">
-<code class="sig-name descname"><span class="pre">get_joint_lower_angle_limits</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.get_joint_lower_angle_limits" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.get_joint_upper_angle_limits">
-<code class="sig-name descname"><span class="pre">get_joint_upper_angle_limits</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.get_joint_upper_angle_limits" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.get_joint_velocity_limits">
-<code class="sig-name descname"><span class="pre">get_joint_velocity_limits</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.get_joint_velocity_limits" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.get_link_names">
-<code class="sig-name descname"><span class="pre">get_link_names</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.get_link_names" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.get_ndofs">
-<code class="sig-name descname"><span class="pre">get_ndofs</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.get_ndofs" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.get_updated_urdf">
-<code class="sig-name descname"><span class="pre">get_updated_urdf</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.get_updated_urdf" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.inverse_dynamics">
-<code class="sig-name descname"><span class="pre">inverse_dynamics</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.inverse_dynamics" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.print_kinematic_and_dynamic_params">
-<code class="sig-name descname"><span class="pre">print_kinematic_and_dynamic_params</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.print_kinematic_and_dynamic_params" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.print_kinematic_params">
-<code class="sig-name descname"><span class="pre">print_kinematic_params</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.print_kinematic_params" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.print_link_names">
-<code class="sig-name descname"><span class="pre">print_link_names</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.print_link_names" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.propagateRNE_it">
-<code class="sig-name descname"><span class="pre">propagateRNE_it</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_lin_acc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_ang_acc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.propagateRNE_it" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.training">
-<code class="sig-name descname"><span class="pre">training</span></code><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.models.torch_rnea.RobotModelTorch.update_kinematic_state">
-<code class="sig-name descname"><span class="pre">update_kinematic_state</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.RobotModelTorch.update_kinematic_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>Updating the linear and angular positions and velocities of the links.
-:param joint_angles:
-:param joint_vel:
-:return:</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py function">
-<dt id="torchcontrol.models.torch_rnea.cross_product">
-<code class="sig-prename descclassname"><span class="pre">torchcontrol.models.torch_rnea.</span></code><code class="sig-name descname"><span class="pre">cross_product</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec3a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vec3b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.cross_product" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt id="torchcontrol.models.torch_rnea.vector3_to_skew_symm_matrix">
-<code class="sig-prename descclassname"><span class="pre">torchcontrol.models.torch_rnea.</span></code><code class="sig-name descname"><span class="pre">vector3_to_skew_symm_matrix</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.vector3_to_skew_symm_matrix" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt id="torchcontrol.models.torch_rnea.x_rot">
-<code class="sig-prename descclassname"><span class="pre">torchcontrol.models.torch_rnea.</span></code><code class="sig-name descname"><span class="pre">x_rot</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">torch.float32</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.x_rot" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt id="torchcontrol.models.torch_rnea.y_rot">
-<code class="sig-prename descclassname"><span class="pre">torchcontrol.models.torch_rnea.</span></code><code class="sig-name descname"><span class="pre">y_rot</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">torch.float32</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.y_rot" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt id="torchcontrol.models.torch_rnea.z_rot">
-<code class="sig-prename descclassname"><span class="pre">torchcontrol.models.torch_rnea.</span></code><code class="sig-name descname"><span class="pre">z_rot</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">torch.float32</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.models.torch_rnea.z_rot" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 </div>
 <div class="section" id="module-torchcontrol.models">

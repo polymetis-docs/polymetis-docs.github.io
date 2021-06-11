@@ -7,8 +7,8 @@ Python
 .. toctree::
    :maxdepth: 4
 
-   fair_controller_manager
-   fair_robot_envs
+   polymetis
+   polysim
    torchcontrol
 
 ..

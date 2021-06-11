@@ -15,18 +15,18 @@ Commands sent from the User Client and run on the Controller Manager Server are 
 Note that everything to the left of the dashed line should be run on a linux machine with real-time capabilities (we use a i7 NUC with PREEMPT_RT installed). The clients are programs that connect to the hardware devices through their own means, and relays messages to/from the Controller Manager Server with RPC.
 
 
-### fair-controller-manager
+### Polymetis
 
 Contains:
 - Controller Manager Server
 - User Client
 - Franka Panda Hardware Client
 
-### fair-robot-envs
+### Polysim
 
 Contains:
 - Simulation Client
 
-The sim wrapper `fair_robot_envs.GrpcSimulationClient` connects simulations to the Controller Manager Server. 
-The package includes several compatible simulation environents, and also exposes a abstract simulation class `fair_robot_envs.AbstractControlledEnv` to enable creation of custom simulation environments that are also compatible.
+The sim wrapper `polysim.GrpcSimulationClient` connects simulations to the Controller Manager Server. 
+The package includes several compatible simulation environents, and also exposes a abstract simulation class `polysim.AbstractControlledEnv` to enable creation of custom simulation environments that are also compatible.
 

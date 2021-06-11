@@ -4,14 +4,6 @@ torchcontrol.policies package
 Submodules
 ----------
 
-torchcontrol.policies.ee\_move\_to module
------------------------------------------
-
-.. automodule:: torchcontrol.policies.ee_move_to
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 torchcontrol.policies.ee\_pd module
 -----------------------------------
 
@@ -24,14 +16,6 @@ torchcontrol.policies.ilqr module
 ---------------------------------
 
 .. automodule:: torchcontrol.policies.ilqr
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-torchcontrol.policies.joint\_move\_to module
---------------------------------------------
-
-.. automodule:: torchcontrol.policies.joint_move_to
    :members:
    :undoc-members:
    :show-inheritance:

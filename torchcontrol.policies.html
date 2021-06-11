@@ -87,12 +87,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="fair-controller-manager-doc.html">
-   FAIR Controller Manager
+  <a class="reference internal" href="polymetis-doc.html">
+   Polymetis
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="fair-robot-envs-doc.html">
+  <a class="reference internal" href="polysim-doc.html">
    FAIR Robot Environments
   </a>
  </li>
@@ -109,8 +109,8 @@
   </label>
   <ul class="current">
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="fair_controller_manager.html">
-     fair_controller_manager package
+    <a class="reference internal" href="polymetis.html">
+     polymetis package
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -119,30 +119,20 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="fair_controller_manager.robot_client.html">
-       fair_controller_manager.robot_client package
+      <a class="reference internal" href="polymetis.robot_client.html">
+       polymetis.robot_client package
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="fair_controller_manager.robot_models.html">
-       fair_controller_manager.robot_models package
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="fair_controller_manager.torch_policies.html">
-       fair_controller_manager.torch_policies package
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="fair_controller_manager.utils.html">
-       fair_controller_manager.utils package
+      <a class="reference internal" href="polymetis.utils.html">
+       polymetis.utils package
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="fair_robot_envs.html">
-     fair_robot_envs package
+    <a class="reference internal" href="polysim.html">
+     polysim package
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
     <label for="toctree-checkbox-3">
@@ -151,8 +141,8 @@
     </label>
     <ul>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="fair_robot_envs.envs.html">
-       fair_robot_envs.envs package
+      <a class="reference internal" href="polysim.envs.html">
+       polysim.envs package
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
       <label for="toctree-checkbox-4">
@@ -280,11 +270,6 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#module-torchcontrol.policies.ee_move_to">
-   torchcontrol.policies.ee_move_to module
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#module-torchcontrol.policies.ee_pd">
    torchcontrol.policies.ee_pd module
   </a>
@@ -292,11 +277,6 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#module-torchcontrol.policies.ilqr">
    torchcontrol.policies.ilqr module
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#module-torchcontrol.policies.joint_move_to">
-   torchcontrol.policies.joint_move_to module
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -325,40 +305,26 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-torchcontrol.policies.ee_move_to">
-<span id="torchcontrol-policies-ee-move-to-module"></span><h2>torchcontrol.policies.ee_move_to module<a class="headerlink" href="#module-torchcontrol.policies.ee_move_to" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
-<dt id="torchcontrol.policies.ee_move_to.OperationalSpaceMoveTo">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.policies.ee_move_to.</span></code><code class="sig-name descname"><span class="pre">OperationalSpaceMoveTo</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_pos_current</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ee_pos_desired</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Kp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Kd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_to_go</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hz</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">urdf_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ee_joint_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ee_quat_desired</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_grav_comp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.policies.ee_move_to.OperationalSpaceMoveTo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torchcontrol._module.PolicyModule</span></code></p>
-<dl class="py attribute">
-<dt id="torchcontrol.policies.ee_move_to.OperationalSpaceMoveTo.N">
-<code class="sig-name descname"><span class="pre">N</span></code><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#torchcontrol.policies.ee_move_to.OperationalSpaceMoveTo.N" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.policies.ee_move_to.OperationalSpaceMoveTo.forward">
-<code class="sig-name descname"><span class="pre">forward</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.policies.ee_move_to.OperationalSpaceMoveTo.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="torchcontrol.policies.ee_move_to.OperationalSpaceMoveTo.i">
-<code class="sig-name descname"><span class="pre">i</span></code><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#torchcontrol.policies.ee_move_to.OperationalSpaceMoveTo.i" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-</div>
 <div class="section" id="module-torchcontrol.policies.ee_pd">
 <span id="torchcontrol-policies-ee-pd-module"></span><h2>torchcontrol.policies.ee_pd module<a class="headerlink" href="#module-torchcontrol.policies.ee_pd" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="torchcontrol.policies.ee_pd.CartesianImpedanceControl">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.policies.ee_pd.</span></code><code class="sig-name descname"><span class="pre">CartesianImpedanceControl</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_pos_current</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Kp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Kd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">urdf_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ee_joint_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_grav_comp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.policies.ee_pd.CartesianImpedanceControl" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.policies.ee_pd.</span></code><code class="sig-name descname"><span class="pre">CartesianImpedanceControl</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_pos_current</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Kp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Kd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot_model</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.nn.modules.module.Module</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_gravity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.policies.ee_pd.CartesianImpedanceControl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torchcontrol._module.PolicyModule</span></code></p>
+<p>Performs impedance control in Cartesian space.
+Errors and feedback are computed in Cartesian space, and the resulting forces are projected back into joint space.</p>
 <dl class="py method">
 <dt id="torchcontrol.policies.ee_pd.CartesianImpedanceControl.forward">
-<code class="sig-name descname"><span class="pre">forward</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.policies.ee_pd.CartesianImpedanceControl.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname"><span class="pre">forward</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#torchcontrol.policies.ee_pd.CartesianImpedanceControl.forward" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>state_dict</strong> – A dictionary containing robot states</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary containing the controller output</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -369,25 +335,19 @@
 <dt id="torchcontrol.policies.ilqr.iLQR">
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.policies.ilqr.</span></code><code class="sig-name descname"><span class="pre">iLQR</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Kxs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_desireds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_ffs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.policies.ilqr.iLQR" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torchcontrol._module.PolicyModule</span></code></p>
-<p>Executes a time-varying linear feedback policy (output of iLQR optimization).</p>
-<dl class="simple">
-<dt>Definitions:</dt><dd><p>state_dim: number of state dimensions
-num_dofs: number of action dimensions</p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>Kxs</strong> (<em>torch.Tensor</em>) – [ time_horizon x num_dofs x state_dim ] series of gain matrices</p></li>
-<li><p><strong>x_desireds</strong> (<em>torch.Tensor</em>) – [ time_horizon x state_dim ] series of desired state</p></li>
-<li><p><strong>u_ffs</strong> (<em>torch.Tensor</em>) – [ time_horizon x num_dofs ] series of desired torques</p></li>
-</ul>
-</dd>
-</dl>
+<p>Executes a time-varying linear feedback policy (output of iLQR optimization)</p>
 <dl class="py method">
 <dt id="torchcontrol.policies.ilqr.iLQR.forward">
-<code class="sig-name descname"><span class="pre">forward</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.policies.ilqr.iLQR.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname"><span class="pre">forward</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#torchcontrol.policies.ilqr.iLQR.forward" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>state_dict</strong> – Robot state dictionary</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary containing the controller output</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py attribute">
 <dt id="torchcontrol.policies.ilqr.iLQR.i">
@@ -397,40 +357,25 @@ num_dofs: number of action dimensions</p>
 </dd></dl>
 
 </div>
-<div class="section" id="module-torchcontrol.policies.joint_move_to">
-<span id="torchcontrol-policies-joint-move-to-module"></span><h2>torchcontrol.policies.joint_move_to module<a class="headerlink" href="#module-torchcontrol.policies.joint_move_to" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
-<dt id="torchcontrol.policies.joint_move_to.JointSpaceMoveTo">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.policies.joint_move_to.</span></code><code class="sig-name descname"><span class="pre">JointSpaceMoveTo</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_pos_current</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_pos_desired</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Kp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Kd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_to_go</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hz</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">urdf_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ee_joint_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_grav_comp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.policies.joint_move_to.JointSpaceMoveTo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torchcontrol._module.PolicyModule</span></code></p>
-<dl class="py attribute">
-<dt id="torchcontrol.policies.joint_move_to.JointSpaceMoveTo.N">
-<code class="sig-name descname"><span class="pre">N</span></code><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#torchcontrol.policies.joint_move_to.JointSpaceMoveTo.N" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="torchcontrol.policies.joint_move_to.JointSpaceMoveTo.forward">
-<code class="sig-name descname"><span class="pre">forward</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.policies.joint_move_to.JointSpaceMoveTo.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="torchcontrol.policies.joint_move_to.JointSpaceMoveTo.i">
-<code class="sig-name descname"><span class="pre">i</span></code><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#torchcontrol.policies.joint_move_to.JointSpaceMoveTo.i" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-</div>
 <div class="section" id="module-torchcontrol.policies.joint_pd">
 <span id="torchcontrol-policies-joint-pd-module"></span><h2>torchcontrol.policies.joint_pd module<a class="headerlink" href="#module-torchcontrol.policies.joint_pd" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="torchcontrol.policies.joint_pd.JointImpedanceControl">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.policies.joint_pd.</span></code><code class="sig-name descname"><span class="pre">JointImpedanceControl</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_pos_current</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Kp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Kd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">urdf_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ee_joint_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_grav_comp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.policies.joint_pd.JointImpedanceControl" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.policies.joint_pd.</span></code><code class="sig-name descname"><span class="pre">JointImpedanceControl</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_pos_current</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Kp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Kd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot_model</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.nn.modules.module.Module</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_gravity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.policies.joint_pd.JointImpedanceControl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torchcontrol._module.PolicyModule</span></code></p>
+<p>Impedance control in joint space.</p>
 <dl class="py method">
 <dt id="torchcontrol.policies.joint_pd.JointImpedanceControl.forward">
-<code class="sig-name descname"><span class="pre">forward</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.policies.joint_pd.JointImpedanceControl.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname"><span class="pre">forward</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#torchcontrol.policies.joint_pd.JointImpedanceControl.forward" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>state_dict</strong> – A dictionary containing robot states</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary containing the controller output</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 

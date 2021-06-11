@@ -10,7 +10,7 @@ launch_robot.py robot_client=[franka_sim|franka_hardware] gui=[true|false] use_r
 `launch_robot.py` is an executable script (which should already be installed in your `$CONDA_PREFIX/bin`) which starts both a controller manager server and a robot client which connects to it, and is installed as a script with the conda package by default. It utilizes [Hydra](https://hydra.cc/) configurations to easily swap between simulation and hardware.
 
 - For simulation, the `gui` option controls whether the PyBullet simulation renders, and requires an active display (i.e. you may need to use VNC if `ssh`ing).
-- For hardware, `use_real_time` acquires the necessary `sudo` rights for real-time optimizations (see [here](https://github.com/fair-robotics/fair-robot-envs/blob/master/fair_controller_manager/include/real_time.hpp) for details.)
+- For hardware, `use_real_time` acquires the necessary `sudo` rights for real-time optimizations (see [here](https://github.com/fair-robotics/fair-robot-envs/blob/master/polymetis/include/real_time.hpp) for details.)
 
 ### Usage on Franka Panda hardware
 

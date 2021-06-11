@@ -89,12 +89,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="fair-controller-manager-doc.html">
-   FAIR Controller Manager
+  <a class="reference internal" href="polymetis-doc.html">
+   Polymetis
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="fair-robot-envs-doc.html">
+  <a class="reference internal" href="polysim-doc.html">
    FAIR Robot Environments
   </a>
  </li>
@@ -111,8 +111,8 @@
   </label>
   <ul class="current">
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="fair_controller_manager.html">
-     fair_controller_manager package
+    <a class="reference internal" href="polymetis.html">
+     polymetis package
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -121,30 +121,20 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="fair_controller_manager.robot_client.html">
-       fair_controller_manager.robot_client package
+      <a class="reference internal" href="polymetis.robot_client.html">
+       polymetis.robot_client package
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="fair_controller_manager.robot_models.html">
-       fair_controller_manager.robot_models package
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="fair_controller_manager.torch_policies.html">
-       fair_controller_manager.torch_policies package
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="fair_controller_manager.utils.html">
-       fair_controller_manager.utils package
+      <a class="reference internal" href="polymetis.utils.html">
+       polymetis.utils package
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="fair_robot_envs.html">
-     fair_robot_envs package
+    <a class="reference internal" href="polysim.html">
+     polysim package
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
     <label for="toctree-checkbox-3">
@@ -153,8 +143,8 @@
     </label>
     <ul>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="fair_robot_envs.envs.html">
-       fair_robot_envs.envs package
+      <a class="reference internal" href="polysim.envs.html">
+       polysim.envs package
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
       <label for="toctree-checkbox-4">
@@ -349,7 +339,7 @@ combine to create policies.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Output action of shape (6,)</p>
+<dd class="field-even"><p>Output wrench of shape (6,)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -422,14 +412,14 @@ combine to create policies.</p>
 <dl class="py class">
 <dt id="torchcontrol.modules.feedback.OperationalSpacePD">
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.modules.feedback.</span></code><code class="sig-name descname"><span class="pre">OperationalSpacePD</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Kp</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Kd</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot_model</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.nn.modules.module.Module</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.modules.feedback.OperationalSpacePD" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#torchcontrol.modules.feedback.CartesianSpacePD" title="torchcontrol.modules.feedback.CartesianSpacePD"><code class="xref py py-class docutils literal notranslate"><span class="pre">torchcontrol.modules.feedback.CartesianSpacePD</span></code></a></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torchcontrol._module.ControlModule</span></code></p>
 <p>PD feedback control in operational space.
-Feedback forces are computed in Cartesian space, then projected back into joint space.</p>
+Errors are computed in Cartesian space, then projected back into joint space to compute joint torques.</p>
 <p>nA is the action dimension and N is the number of degrees of freedom</p>
 <dl class="simple">
 <dt>Module parameters:</dt><dd><ul class="simple">
-<li><p>Kp: P gain matrix of shape (6, 6)</p></li>
-<li><p>Kd: D gain matrix of shape (6, 6)</p></li>
+<li><p>Kp: P gain matrix of shape (nA, N)</p></li>
+<li><p>Kd: D gain matrix of shape (nA, N)</p></li>
 </ul>
 </dd>
 </dl>
@@ -446,7 +436,7 @@ Feedback forces are computed in Cartesian space, then projected back into joint 
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Output action of shape (nA,)</p>
+<dd class="field-even"><p>Output torques of shape (nA,)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -456,14 +446,14 @@ Feedback forces are computed in Cartesian space, then projected back into joint 
 <dl class="py class">
 <dt id="torchcontrol.modules.feedback.OperationalSpacePositionPD">
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.modules.feedback.</span></code><code class="sig-name descname"><span class="pre">OperationalSpacePositionPD</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Kp</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Kd</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_pos_current</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot_model</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.nn.modules.module.Module</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.modules.feedback.OperationalSpacePositionPD" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#torchcontrol.modules.feedback.OperationalSpacePD" title="torchcontrol.modules.feedback.OperationalSpacePD"><code class="xref py py-class docutils literal notranslate"><span class="pre">torchcontrol.modules.feedback.OperationalSpacePD</span></code></a></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torchcontrol._module.ControlModule</span></code></p>
 <p>PD feedback control in operational space, but with position only.
 Feedback forces are computed in Cartesian space, then projected back into joint space.</p>
 <p>nA is the action dimension and N is the number of degrees of freedom</p>
 <dl class="simple">
 <dt>Module parameters:</dt><dd><ul class="simple">
-<li><p>Kp: P gain matrix of shape (6, 6)</p></li>
-<li><p>Kd: D gain matrix of shape (6, 6)</p></li>
+<li><p>op_space_pd.Kp: P gain matrix of shape (6, 6)</p></li>
+<li><p>op_space_pd.Kd: D gain matrix of shape (6, 6)</p></li>
 </ul>
 </dd>
 </dl>
@@ -515,7 +505,7 @@ Feedback forces are computed in Cartesian space, then projected back into joint 
 
 <dl class="py class">
 <dt id="torchcontrol.modules.feedforward.InverseDynamics">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.modules.feedforward.</span></code><code class="sig-name descname"><span class="pre">InverseDynamics</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">robot_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_gravity</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.modules.feedforward.InverseDynamics" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.modules.feedforward.</span></code><code class="sig-name descname"><span class="pre">InverseDynamics</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">robot_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_gravity</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.modules.feedforward.InverseDynamics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torchcontrol._module.ControlModule</span></code></p>
 <p>Computes inverse dynamics</p>
 <dl class="py method">
@@ -546,10 +536,34 @@ Feedback forces are computed in Cartesian space, then projected back into joint 
 <div class="section" id="module-torchcontrol.modules.planning">
 <span id="torchcontrol-modules-planning-module"></span><h2>torchcontrol.modules.planning module<a class="headerlink" href="#module-torchcontrol.modules.planning" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt id="torchcontrol.modules.planning.CartesianSpaceMinJerkPlanner">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.modules.planning.</span></code><code class="sig-name descname"><span class="pre">CartesianSpaceMinJerkPlanner</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="torchcontrol.transform.html#torchcontrol.transform.transformation.TransformationObj" title="torchcontrol.transform.transformation.TransformationObj"><span class="pre">torchcontrol.transform.transformation.TransformationObj</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">goal</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="torchcontrol.transform.html#torchcontrol.transform.transformation.TransformationObj" title="torchcontrol.transform.transformation.TransformationObj"><span class="pre">torchcontrol.transform.transformation.TransformationObj</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.modules.planning.CartesianSpaceMinJerkPlanner" title="Permalink to this definition">¶</a></dt>
+<dt id="torchcontrol.modules.planning.CartesianSpaceMinJerkJointPlanner">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.modules.planning.</span></code><code class="sig-name descname"><span class="pre">CartesianSpaceMinJerkJointPlanner</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_pos_start</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ee_pose_goal</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="torchcontrol.transform.html#torchcontrol.transform.transformation.TransformationObj" title="torchcontrol.transform.transformation.TransformationObj"><span class="pre">torchcontrol.transform.transformation.TransformationObj</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_to_go</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot_model</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.nn.modules.module.Module</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.modules.planning.CartesianSpaceMinJerkJointPlanner" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torchcontrol._module.ControlModule</span></code></p>
-<p>Primitive Cartesian space minimum jerk trajectory planner.
+<p>Cartesian space minimum jerk trajectory planner, but outputs plan in joint space.
+Assumes zero velocity &amp; acceleration at start &amp; goal.</p>
+<dl class="py method">
+<dt id="torchcontrol.modules.planning.CartesianSpaceMinJerkJointPlanner.forward">
+<code class="sig-name descname"><span class="pre">forward</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#torchcontrol.modules.planning.CartesianSpaceMinJerkJointPlanner.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries the planned trajectory for the desired states at the input step</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>step</strong> – Step index</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Desired position of shape (N,)
+Desired velocity of shape (N,)
+Desired acceleration of shape (N,)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="torchcontrol.modules.planning.CartesianSpaceMinJerkPlanner">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.modules.planning.</span></code><code class="sig-name descname"><span class="pre">CartesianSpaceMinJerkPlanner</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="torchcontrol.transform.html#torchcontrol.transform.transformation.TransformationObj" title="torchcontrol.transform.transformation.TransformationObj"><span class="pre">torchcontrol.transform.transformation.TransformationObj</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">goal</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="torchcontrol.transform.html#torchcontrol.transform.transformation.TransformationObj" title="torchcontrol.transform.transformation.TransformationObj"><span class="pre">torchcontrol.transform.transformation.TransformationObj</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_to_go</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.modules.planning.CartesianSpaceMinJerkPlanner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torchcontrol._module.ControlModule</span></code></p>
+<p>Cartesian space minimum jerk trajectory planner.
 Assumes zero velocity &amp; acceleration at start &amp; goal.</p>
 <dl class="py method">
 <dt id="torchcontrol.modules.planning.CartesianSpaceMinJerkPlanner.forward">
@@ -571,7 +585,7 @@ Desired accel of shape (6,)</p>
 
 <dl class="py class">
 <dt id="torchcontrol.modules.planning.JointSpaceMinJerkPlanner">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.modules.planning.</span></code><code class="sig-name descname"><span class="pre">JointSpaceMinJerkPlanner</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">goal</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.modules.planning.JointSpaceMinJerkPlanner" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.modules.planning.</span></code><code class="sig-name descname"><span class="pre">JointSpaceMinJerkPlanner</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">goal</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_to_go</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.modules.planning.JointSpaceMinJerkPlanner" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torchcontrol._module.ControlModule</span></code></p>
 <p>Primitive joint space minimum jerk trajectory planner.
 Assumes zero velocity &amp; acceleration at start &amp; goal.</p>
@@ -596,7 +610,7 @@ Desired acceleration of shape (N,)</p>
 
 <dl class="py class">
 <dt id="torchcontrol.modules.planning.PositionMinJerkPlanner">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.modules.planning.</span></code><code class="sig-name descname"><span class="pre">PositionMinJerkPlanner</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">goal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.modules.planning.PositionMinJerkPlanner" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">torchcontrol.modules.planning.</span></code><code class="sig-name descname"><span class="pre">PositionMinJerkPlanner</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">goal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_to_go</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.modules.planning.PositionMinJerkPlanner" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#torchcontrol.modules.planning.JointSpaceMinJerkPlanner" title="torchcontrol.modules.planning.JointSpaceMinJerkPlanner"><code class="xref py py-class docutils literal notranslate"><span class="pre">torchcontrol.modules.planning.JointSpaceMinJerkPlanner</span></code></a></p>
 <p>Minimum jerk trajectory planner through XYZ space.
 Assumes zero velocity &amp; acceleration at start &amp; goal.
@@ -605,8 +619,8 @@ Basically a joint space planner with 3 joints.</p>
 
 <dl class="py function">
 <dt id="torchcontrol.modules.planning.min_jerk_spaces">
-<code class="sig-prename descclassname"><span class="pre">torchcontrol.modules.planning.</span></code><code class="sig-name descname"><span class="pre">min_jerk_spaces</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#torchcontrol.modules.planning.min_jerk_spaces" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generates a 1-dim minimum jerk trajectory from 0 to 1 in N steps.
+<code class="sig-prename descclassname"><span class="pre">torchcontrol.modules.planning.</span></code><code class="sig-name descname"><span class="pre">min_jerk_spaces</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">,</span> </span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#torchcontrol.modules.planning.min_jerk_spaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a 1-dim minimum jerk trajectory from 0 to 1 in N steps &amp; T seconds.
 Assumes zero velocity &amp; acceleration at start &amp; goal.
 The resulting trajectories can be scaled for different start &amp; goals.</p>
 <dl class="field-list simple">

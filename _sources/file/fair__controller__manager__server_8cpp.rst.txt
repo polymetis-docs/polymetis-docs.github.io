@@ -1,4 +1,4 @@
-File fair_controller_manager_server.cpp
+File polymetis_server.cpp
 =======================================
 
-.. doxygenfile:: fair_controller_manager_server.cpp
+.. doxygenfile:: polymetis_server.cpp
