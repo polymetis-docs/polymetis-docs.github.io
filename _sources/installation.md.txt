@@ -1,16 +1,24 @@
 # Installation
 
-1. Activate a conda environment with `python=3.8`
-2. Clone repo
+1. Clone repo:
+    ```bash
+    git clone git@github.com:fair-robotics/polymetis
+    cd polymetis
+    ```
 
-```bash
-git clone git@github.com:fair-robotics/fair-robot-envs
-cd fair-robot-envs
-```
-3. Install polymetis using conda
-```bash
-conda install -c file://$(eval pwd)/polymetis/conda/channel \
-  -c fair-robotics \
-  -c conda-forge \
-  polymetis
-```
+1. Activate a conda environment with `python=3.8`:
+    ```bash
+    conda activate polymetis
+    ```
+    - If you don't have one yet, create one with the proper Python version:
+       ```bash
+       conda create -n polymetis python=3.8
+       ```
+
+1. Install polymetis using conda
+    ```bash
+    conda install -c file://$(eval pwd)/polymetis/conda/channel \
+      -c fair-robotics \
+      -c conda-forge \
+      polymetis
+    ```

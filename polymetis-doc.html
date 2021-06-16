@@ -320,19 +320,19 @@
         
               <div>
                 
-  <div class="section" id="polymetis">
+  <div class="tex2jax_ignore mathjax_ignore section" id="polymetis">
 <h1>Polymetis<a class="headerlink" href="#polymetis" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="start-the-controller-manager-server-and-robot-client">
 <h3>Start the <strong>Controller Manager Server</strong> and <strong>Robot Client</strong><a class="headerlink" href="#start-the-controller-manager-server-and-robot-client" title="Permalink to this headline">¶</a></h3>
-<p>See instructions in <a class="reference external" href="https://github.com/fair-robotics/fair-robot-envs/tree/master/examples/">examples</a> to run the server and client. Clients include:</p>
+<p>See instructions in <a class="reference external" href="https://github.com/fair-robotics/polymetis/tree/master/examples/">examples</a> to run the server and client. Clients include:</p>
 <ul class="simple">
 <li><p><strong>Franka Client</strong>: A hardware client designed to work with the Franka Panda arm, implemented as a wrapper around <a class="reference external" href="https://frankaemika.github.io/docs/libfranka.html">Libfranka</a></p></li>
 <li><p><strong>Simulation Client</strong>: A simulation client which has the same interface as the hardware client. For details, see documentation in <a class="reference internal" href="polysim-doc.html"><span class="doc std std-doc">polysim</span></a>.</p></li>
 <li><p><strong>Empty Statistics Client</strong>: A robot client which prints statistics about time taken by RPC calls and always returns joint states of 0s). Can be used to confirm that the Controller Manager Server is running properly and to debug performance issues.</p></li>
 </ul>
-<p><a class="reference external" href="http://hydra.cc/">Hydra</a> configuration files can be found in <a class="reference external" href="https://github.com/fair-robotics/fair-robot-envs/tree/master/polymetis/conf/robot_client">polymetis/conf/robot_client</a>.</p>
+<p><a class="reference external" href="http://hydra.cc/">Hydra</a> configuration files can be found in <a class="reference external" href="https://github.com/fair-robotics/polymetis/tree/master/polymetis/conf/robot_client">polymetis/conf/robot_client</a>.</p>
 </div>
 <div class="section" id="connect-a-user-client-to-the-controller-manager-server-use-it-to-execute-user-scripts">
 <h3>Connect a <strong>User Client</strong> to the Controller Manager Server &amp; use it to execute user scripts<a class="headerlink" href="#connect-a-user-client-to-the-controller-manager-server-use-it-to-execute-user-scripts" title="Permalink to this headline">¶</a></h3>
@@ -345,8 +345,8 @@
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> is the IP of the Controller Manager Server. Since we’re launching it locally in this example, the IP will be <code class="docutils literal notranslate"><span class="pre">localhost</span></code>.</p>
-<p>Definitions of available methods can be found <a class="reference external" href="https://github.com/fair-robotics/fair-robot-envs/tree/master/polymetis/python/polymetis/robot_interface.py">here</a>.
-Sample user scripts can be found in <a class="reference external" href="https://github.com/fair-robotics/fair-robot-envs/tree/master/examples">examples</a>.</p>
+<p>Definitions of available methods can be found <a class="reference external" href="https://github.com/fair-robotics/polymetis/tree/master/polymetis/python/polymetis/robot_interface.py">here</a>.
+Sample user scripts can be found in <a class="reference external" href="https://github.com/fair-robotics/polymetis/tree/master/examples">examples</a>.</p>
 </div>
 </div>
 <div class="section" id="for-developers">

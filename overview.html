@@ -93,7 +93,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="polysim-doc.html">
-   FAIR Robot Environments
+   Polysim
   </a>
  </li>
 </ul>
@@ -285,15 +285,17 @@
         
               <div>
                 
-  <div class="section" id="overview">
+  <div class="tex2jax_ignore mathjax_ignore section" id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
 <p>The <strong>Controller Manager Server</strong> acts as a centralized gRPC server that facilitates all communication. It accepts high-level commands from the user in the form of controller code (in <a class="reference external" href="https://pytorch.org/docs/stable/jit.html">Torchscript</a>), and runs the controllers in a high frequency control loop to control the robot.</p>
 <p>The <strong>User Client</strong> provides an API for users to control the robot.</p>
 <p>The <strong>Robot Client</strong> sends requests containing robot states &amp; observations, and receives server responses containing torques from the output of the current controller running on the Controller Manager Server. The Robot Client can be either a simulation or a real robot, which we will subcategorize as Simulation Client and Hardware Client respectively.</p>
-<p>Figure of the client-server architecture:</p>
-<p><img alt="Diagram" src="_images/diagram.png" /></p>
+<blockquote>
+<div><p><strong>Diagram of client-server architecture</strong>
+<img alt="Diagram" src="_images/diagram.png" /></p>
+</div></blockquote>
 <p>Commands sent from the User Client and run on the Controller Manager Server are the same regardless of whether a simulated robot or a real robot is connected on the other side, and thus the same user code can be used for running experiments in simulation and on hardware.</p>
-<p>Note that everything to the left of the dashed line should be run on a linux machine with real-time capabilities (we use a i7 NUC with PREEMPT_RT installed). The clients are programs that connect to the hardware devices through their own means, and relays messages to/from the Controller Manager Server with RPC.</p>
+<p>Note that both the robot client and the server in this case should be run on a linux machine with real-time capabilities (we use a i7 NUC with PREEMPT_RT installed). The robot clients are programs that connect to the hardware devices through their low-level drivers, and relay messages to/from the Controller Manager Server with RPC.</p>
 <div class="section" id="polymetis">
 <h2>Polymetis<a class="headerlink" href="#polymetis" title="Permalink to this headline">¶</a></h2>
 <p>Contains:</p>

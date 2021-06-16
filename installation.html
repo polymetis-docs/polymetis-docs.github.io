@@ -93,7 +93,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="polysim-doc.html">
-   FAIR Robot Environments
+   Polysim
   </a>
  </li>
 </ul>
@@ -267,25 +267,36 @@
         
               <div>
                 
-  <div class="section" id="installation">
+  <div class="tex2jax_ignore mathjax_ignore section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<ol class="simple">
-<li><p>Activate a conda environment with <code class="docutils literal notranslate"><span class="pre">python=3.8</span></code></p></li>
-<li><p>Clone repo</p></li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone git@github.com:fair-robotics/fair-robot-envs
-<span class="nb">cd</span> fair-robot-envs
+<ol>
+<li><p>Clone repo:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone git@github.com:fair-robotics/polymetis
+<span class="nb">cd</span> polymetis
 </pre></div>
 </div>
-<ol class="simple">
-<li><p>Install polymetis using conda</p></li>
-</ol>
+</li>
+<li><p>Activate a conda environment with <code class="docutils literal notranslate"><span class="pre">python=3.8</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate polymetis
+</pre></div>
+</div>
+<ul>
+<li><p>If you don’t have one yet, create one with the proper Python version:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n polymetis <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Install polymetis using conda</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c file://<span class="k">$(</span><span class="nb">eval</span> <span class="nb">pwd</span><span class="k">)</span>/polymetis/conda/channel <span class="se">\</span>
   -c fair-robotics <span class="se">\</span>
   -c conda-forge <span class="se">\</span>
   polymetis
 </pre></div>
 </div>
+</li>
+</ol>
 </div>
 
 

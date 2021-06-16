@@ -93,7 +93,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="polysim-doc.html">
-   FAIR Robot Environments
+   Polysim
   </a>
  </li>
 </ul>
@@ -265,19 +265,21 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#running-the-server-and-robot-client-sim-and-hardware">
-   Running the server and robot client (sim and hardware)
+  <a class="reference internal nav-link" href="#running-the-server-and-robot-client-simulation">
+   Running the server and robot client (simulation)
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#usage-on-franka-panda-hardware">
-   Usage on Franka Panda hardware
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#running-controllers-in-user-code">
-   Running controllers in user code
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#running-the-server-and-robot-client-on-franka-panda-hardware">
+     Running the server and robot client on Franka Panda hardware
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#running-controllers-in-user-code">
+     Running controllers in user code
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -290,22 +292,18 @@
         
               <div>
                 
-  <div class="section" id="usage">
+  <div class="tex2jax_ignore mathjax_ignore section" id="usage">
 <h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="running-the-server-and-robot-client-sim-and-hardware">
-<h2>Running the server and robot client (sim and hardware)<a class="headerlink" href="#running-the-server-and-robot-client-sim-and-hardware" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="running-the-server-and-robot-client-simulation">
+<h2>Running the server and robot client (simulation)<a class="headerlink" href="#running-the-server-and-robot-client-simulation" title="Permalink to this headline">¶</a></h2>
 <p>To run the server and robot client for Franka:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>launch_robot.py <span class="nv">robot_client</span><span class="o">=[</span>franka_sim<span class="p">|</span>franka_hardware<span class="o">]</span> <span class="nv">gui</span><span class="o">=[</span>true<span class="p">|</span>false<span class="o">]</span> <span class="nv">use_real_time</span><span class="o">=[</span>true<span class="p">|</span>false<span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>launch_robot.py <span class="nv">robot_client</span><span class="o">=</span>franka_sim <span class="nv">use_real_time</span><span class="o">=</span><span class="nb">false</span> <span class="nv">gui</span><span class="o">=[</span>true<span class="p">|</span>false<span class="o">]</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">launch_robot.py</span></code> is an executable script (which should already be installed in your <code class="docutils literal notranslate"><span class="pre">$CONDA_PREFIX/bin</span></code>) which starts both a controller manager server and a robot client which connects to it, and is installed as a script with the conda package by default. It utilizes <a class="reference external" href="https://hydra.cc/">Hydra</a> configurations to easily swap between simulation and hardware.</p>
-<ul class="simple">
-<li><p>For simulation, the <code class="docutils literal notranslate"><span class="pre">gui</span></code> option controls whether the PyBullet simulation renders, and requires an active display (i.e. you may need to use VNC if <code class="docutils literal notranslate"><span class="pre">ssh</span></code>ing).</p></li>
-<li><p>For hardware, <code class="docutils literal notranslate"><span class="pre">use_real_time</span></code> acquires the necessary <code class="docutils literal notranslate"><span class="pre">sudo</span></code> rights for real-time optimizations (see <a class="reference external" href="https://github.com/fair-robotics/fair-robot-envs/blob/master/polymetis/include/real_time.hpp">here</a> for details.)</p></li>
-</ul>
-</div>
-<div class="section" id="usage-on-franka-panda-hardware">
-<h2>Usage on Franka Panda hardware<a class="headerlink" href="#usage-on-franka-panda-hardware" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">launch_robot.py</span></code> is an executable script which starts both a controller manager server and a robot client which connects to it, and is installed as a script with the conda package by default in <code class="docutils literal notranslate"><span class="pre">$CONDA_PREFIX/bin</span></code>. It utilizes <a class="reference external" href="https://hydra.cc/">Hydra</a> configurations to easily swap between simulation and hardware.</p>
+<p>For simulation, the <code class="docutils literal notranslate"><span class="pre">gui</span></code> option controls whether the PyBullet simulation renders, and requires an active display (i.e. you may need to use VNC if <code class="docutils literal notranslate"><span class="pre">ssh</span></code>ing).</p>
+<div class="section" id="running-the-server-and-robot-client-on-franka-panda-hardware">
+<h3>Running the server and robot client on Franka Panda hardware<a class="headerlink" href="#running-the-server-and-robot-client-on-franka-panda-hardware" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Wait for your robot to boot up (wait for the blinking yellow light turns solid yellow).</p></li>
 <li><p>If your robot has its joints locked (yellow light), unlock it from Franka Desk.</p></li>
@@ -316,12 +314,14 @@
 launch_robot.py <span class="nv">robot_client</span><span class="o">=</span>franka_hardware
 </pre></div>
 </div>
+<p>For hardware, <code class="docutils literal notranslate"><span class="pre">use_real_time</span></code> acquires the necessary <code class="docutils literal notranslate"><span class="pre">sudo</span></code> rights for real-time optimizations (see <a class="reference external" href="https://github.com/fair-robotics/polymetis/blob/master/polymetis/include/real_time.hpp">here</a> for the specific optimizations.)</p>
 </div>
 <div class="section" id="running-controllers-in-user-code">
-<h2>Running controllers in user code<a class="headerlink" href="#running-controllers-in-user-code" title="Permalink to this headline">¶</a></h2>
-<p>Once you start an instance of <code class="docutils literal notranslate"><span class="pre">launch_robot.py</span></code>, you can send commands by utilizing the example user code, found in <a class="reference external" href="https://github.com/fair-robotics/fair-robot-envs/tree/master/examples/">scripts</a>.</p>
-<p>For real-time uses (e.g. on hardware), it is highly recommended that this is run on a different machine than the machine directly controlling the robot, to avoid interruptions of the real-time loop. To do this, simply edit the <code class="docutils literal notranslate"><span class="pre">ip</span></code> while constructing the <code class="docutils literal notranslate"><span class="pre">RobotInterface</span></code>, e.g. in the <a class="reference external" href="https://github.com/fair-robotics/fair-robot-envs/tree/master/examples/">scripts</a>.</p>
+<h3>Running controllers in user code<a class="headerlink" href="#running-controllers-in-user-code" title="Permalink to this headline">¶</a></h3>
+<p>Once you start an instance of <code class="docutils literal notranslate"><span class="pre">launch_robot.py</span></code>, you can send commands by utilizing the example user code, found in <a class="reference external" href="https://github.com/fair-robotics/polymetis/tree/master/examples/">scripts</a>.</p>
+<p>For real-time uses (e.g. on hardware), it is highly recommended that this is run on a different machine than the machine directly controlling the robot, to avoid interruptions of the real-time loop. To do this, simply edit the <code class="docutils literal notranslate"><span class="pre">ip</span></code> while constructing the <code class="docutils literal notranslate"><span class="pre">RobotInterface</span></code>, e.g. in the <a class="reference external" href="https://github.com/fair-robotics/polymetis/tree/master/examples/">scripts</a>.</p>
 <p>To <strong>debug custom TorchScript policies</strong>, TorchScript can directly script <code class="docutils literal notranslate"><span class="pre">print</span></code> statements, which will output <strong>on the server</strong> (i.e. for hardware, it will print on the NUC machine, where the <code class="docutils literal notranslate"><span class="pre">launch_robot.py</span></code> script was launched).</p>
+</div>
 </div>
 </div>
 
