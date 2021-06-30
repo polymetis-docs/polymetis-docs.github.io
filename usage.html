@@ -286,7 +286,7 @@
         
               <div>
                 
-  <div class="section" id="usage">
+  <div class="tex2jax_ignore mathjax_ignore section" id="usage">
 <h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="running-the-server-and-robot-client-simulation">
 <h2>Running the server and robot client (simulation)<a class="headerlink" href="#running-the-server-and-robot-client-simulation" title="Permalink to this headline">¶</a></h2>
@@ -308,12 +308,12 @@
 launch_robot.py <span class="nv">robot_client</span><span class="o">=</span>franka_hardware
 </pre></div>
 </div>
-<p>For hardware, <code class="docutils literal notranslate"><span class="pre">use_real_time</span></code> acquires the necessary <code class="docutils literal notranslate"><span class="pre">sudo</span></code> rights for real-time optimizations (see <a class="reference external" href="https://github.com/fair-robotics/polymetis/blob/master/polymetis/include/real_time.hpp">here</a> for the specific optimizations.)</p>
+<p>For hardware, <code class="docutils literal notranslate"><span class="pre">use_real_time</span></code> acquires the necessary <code class="docutils literal notranslate"><span class="pre">sudo</span></code> rights for real-time optimizations (see <a class="reference external" href="https://github.com/facebookresearch/droidlet/blob/main/polymetis/polymetis/include/real_time.hpp">here</a> for the specific optimizations.)</p>
 </div>
 <div class="section" id="running-controllers-in-user-code">
 <h3>Running controllers in user code<a class="headerlink" href="#running-controllers-in-user-code" title="Permalink to this headline">¶</a></h3>
-<p>Once you start an instance of <code class="docutils literal notranslate"><span class="pre">launch_robot.py</span></code>, you can send commands by utilizing the example user code, found in <a class="reference external" href="https://github.com/fair-robotics/polymetis/tree/master/examples/">scripts</a>.</p>
-<p>For real-time uses (e.g. on hardware), it is highly recommended that this is run on a different machine than the machine directly controlling the robot, to avoid interruptions of the real-time loop. To do this, simply edit the <code class="docutils literal notranslate"><span class="pre">ip</span></code> while constructing the <code class="docutils literal notranslate"><span class="pre">RobotInterface</span></code>, e.g. in the <a class="reference external" href="https://github.com/fair-robotics/polymetis/tree/master/examples/">scripts</a>.</p>
+<p>Once you start an instance of <code class="docutils literal notranslate"><span class="pre">launch_robot.py</span></code>, you can send commands by utilizing the example user code, found in <a class="reference external" href="https://github.com/facebookresearch/droidlet/tree/main/polymetis/examples">scripts</a>.</p>
+<p>For real-time uses (e.g. on hardware), it is highly recommended that this is run on a different machine than the machine directly controlling the robot, to avoid interruptions of the real-time loop. To do this, simply edit the <code class="docutils literal notranslate"><span class="pre">ip</span></code> while constructing the <code class="docutils literal notranslate"><span class="pre">RobotInterface</span></code>, e.g. in the <a class="reference external" href="https://github.com/facebookresearch/droidlet/tree/main/polymetis/examples">scripts</a>.</p>
 <p>To <strong>debug custom TorchScript policies</strong>, TorchScript can directly script <code class="docutils literal notranslate"><span class="pre">print</span></code> statements, which will output <strong>on the server</strong> (i.e. for hardware, it will print on the NUC machine, where the <code class="docutils literal notranslate"><span class="pre">launch_robot.py</span></code> script was launched).</p>
 </div>
 </div>

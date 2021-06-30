@@ -274,7 +274,7 @@
         
               <div>
                 
-  <div class="section" id="polysim">
+  <div class="tex2jax_ignore mathjax_ignore section" id="polysim">
 <h1>Polysim<a class="headerlink" href="#polysim" title="Permalink to this headline">¶</a></h1>
 <p>The package containing the Polymetis simulation client. Includes a wrapper around PyBullet.</p>
 <div class="section" id="developing-custom-environments">
@@ -286,7 +286,7 @@
     <span class="o">...</span> <span class="c1"># define methods here</span>
 </pre></div>
 </div>
-<p>The created simulation environment must define the following functions (see <a class="reference external" href="https://github.com/fair-robotics/polymetis/tree/master/polysim/polysim/envs/abstract_env.py">abstract_env.py</a> for details):</p>
+<p>The created simulation environment must define the following functions (see <a class="reference external" href="https://github.com/facebookresearch/droidlet/blob/main/polymetis/polymetis/python/polysim/envs/abstract_env.py">abstract_env.py</a> for details):</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">reset</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">get_num_dofs</span></code></p></li>
@@ -294,8 +294,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">get_current_joint_torques</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">apply_joint_torques</span></code></p></li>
 </ul>
-<p>Sample simulation environments can also be found in <a class="reference external" href="https://github.com/fair-robotics/polymetis/tree/master/polysim/polysim/envs">polysim/envs</a></p>
-<p>You must also define metadata around your simulation environment which instantiates a <a class="reference external" href="https://github.com/fair-robotics/polymetis/tree/master/polymetis/python/polymetis/robot_client/metadata.py">RobotClientMetadata</a> object. An example configuration is in the <a class="reference external" href="https://github.com/fair-robotics/polymetis/tree/master/polymetis/conf/robot_client/franka_hardware.yaml">default config</a> under <code class="docutils literal notranslate"><span class="pre">metadata_cfg</span></code>.</p>
+<p>Sample simulation environments can also be found in <a class="reference external" href="https://github.com/facebookresearch/droidlet/tree/main/polymetis/polymetis/python/polysim/envs">polysim/envs</a></p>
+<p>You must also define metadata around your simulation environment which instantiates a <a class="reference external" href="https://github.com/facebookresearch/droidlet/tree/main/polymetis/polymetis/python/polymetis/robot_client/metadata.py">RobotClientMetadata</a> object. An example configuration is in the <a class="reference external" href="https://github.com/facebookresearch/droidlet/tree/main/polymetis/polymetis/conf/robot_client/franka_hardware.yaml">default config</a> under <code class="docutils literal notranslate"><span class="pre">metadata_cfg</span></code>.</p>
 <p>The Simulation Client is implemented as a wrapper around the simulation environment.
 To connect a simulation environment to a local server and run for 1000 steps:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">polysim</span> <span class="kn">import</span> <span class="n">GrpcSimulationClient</span>
