@@ -318,7 +318,7 @@
 </ul>
 </li>
 <li><p>Install polymetis using conda. This should pull the latest successful build from <code class="docutils literal notranslate"><span class="pre">main</span></code> branch.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c fair-robotics -c conda-forge polymetis
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c fair-robotics -c aihabitat -c conda-forge polymetis
 </pre></div>
 </div>
 </li>
@@ -400,6 +400,7 @@ conda activate polymetis-test
 <li><p>Install polymetis from the local channel:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c file://<span class="k">$(</span><span class="nb">eval</span> <span class="nb">pwd</span><span class="k">)</span>/conda/channel <span class="se">\</span>
     -c fair-robotics <span class="se">\</span>
+    -c aihabitat <span class="se">\</span>
     -c conda-forge <span class="se">\</span>
     polymetis
 </pre></div>

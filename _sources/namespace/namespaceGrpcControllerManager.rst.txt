@@ -1,4 +1,0 @@
-Namespace GrpcControllerManager
-===============================
-
-.. doxygennamespace:: GrpcControllerManager
