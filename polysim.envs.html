@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>polysim.envs package &#8212; Polymetis  documentation</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -25,7 +25,7 @@
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -37,7 +37,10 @@
     <link rel="next" title="torchcontrol package" href="torchcontrol.html" />
     <link rel="prev" title="polysim package" href="polysim.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -320,12 +323,12 @@
 <span id="polysim-envs-abstract-env-module"></span><h2>polysim.envs.abstract_env module<a class="headerlink" href="#module-polysim.envs.abstract_env" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="polysim.envs.abstract_env.AbstractControlledEnv">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">polysim.envs.abstract_env.</span></span><span class="sig-name descname"><span class="pre">AbstractControlledEnv</span></span><a class="headerlink" href="#polysim.envs.abstract_env.AbstractControlledEnv" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">polysim.envs.abstract_env.</span></span><span class="sig-name descname"><span class="pre">AbstractControlledEnv</span></span><a class="headerlink" href="#polysim.envs.abstract_env.AbstractControlledEnv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
 <p>Parent class for simulation environments.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="polysim.envs.abstract_env.AbstractControlledEnv.apply_joint_torques">
-<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">apply_joint_torques</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">torques</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.abstract_env.AbstractControlledEnv.apply_joint_torques" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">apply_joint_torques</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">torques</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.abstract_env.AbstractControlledEnv.apply_joint_torques" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
 <dt>input:</dt><dd><p>np.ndarray: Desired torques</p>
 </dd>
@@ -334,7 +337,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="polysim.envs.abstract_env.AbstractControlledEnv.get_current_joint_pos_vel">
-<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">get_current_joint_pos_vel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.abstract_env.AbstractControlledEnv.get_current_joint_pos_vel" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_current_joint_pos_vel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.abstract_env.AbstractControlledEnv.get_current_joint_pos_vel" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Joint positions
@@ -348,7 +351,7 @@ np.ndarray: Joint velocities</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="polysim.envs.abstract_env.AbstractControlledEnv.get_current_joint_torques">
-<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">get_current_joint_torques</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.abstract_env.AbstractControlledEnv.get_current_joint_torques" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_current_joint_torques</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.abstract_env.AbstractControlledEnv.get_current_joint_torques" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Torques received from apply_joint_torques
@@ -364,7 +367,7 @@ np.ndarray: Torques exerted onto the robot</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="polysim.envs.abstract_env.AbstractControlledEnv.get_num_dofs">
-<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">get_num_dofs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.abstract_env.AbstractControlledEnv.get_num_dofs" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_num_dofs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.abstract_env.AbstractControlledEnv.get_num_dofs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the number of degrees of freedom for controlling the simulation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -378,7 +381,7 @@ np.ndarray: Torques exerted onto the robot</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="polysim.envs.abstract_env.AbstractControlledEnv.reset">
-<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.abstract_env.AbstractControlledEnv.reset" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.abstract_env.AbstractControlledEnv.reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reset the environment.</p>
 </dd></dl>
 
@@ -389,7 +392,7 @@ np.ndarray: Torques exerted onto the robot</p>
 <span id="polysim-envs-bullet-manipulator-module"></span><h2>polysim.envs.bullet_manipulator module<a class="headerlink" href="#module-polysim.envs.bullet_manipulator" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="polysim.envs.bullet_manipulator.BulletManipulatorEnv">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">polysim.envs.bullet_manipulator.</span></span><span class="sig-name descname"><span class="pre">BulletManipulatorEnv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">robot_model_cfg</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">omegaconf.dictconfig.DictConfig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gui</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_grav_comp</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gravity</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">9.81</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.bullet_manipulator.BulletManipulatorEnv" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">polysim.envs.bullet_manipulator.</span></span><span class="sig-name descname"><span class="pre">BulletManipulatorEnv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">robot_model_cfg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">omegaconf.dictconfig.DictConfig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gui</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_grav_comp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gravity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">9.81</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.bullet_manipulator.BulletManipulatorEnv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#polysim.envs.abstract_env.AbstractControlledEnv" title="polysim.envs.abstract_env.AbstractControlledEnv"><code class="xref py py-class docutils literal notranslate"><span class="pre">polysim.envs.abstract_env.AbstractControlledEnv</span></code></a></p>
 <p>A manipulator environment using PyBullet.</p>
 <dl class="field-list simple">
@@ -405,14 +408,14 @@ robot model, e.g. URDF. For an example, see
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="polysim.envs.bullet_manipulator.BulletManipulatorEnv.apply_joint_torques">
-<span class="sig-name descname"><span class="pre">apply_joint_torques</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">torque</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.bullet_manipulator.BulletManipulatorEnv.apply_joint_torques" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">apply_joint_torques</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">torque</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.bullet_manipulator.BulletManipulatorEnv.apply_joint_torques" title="Permalink to this definition">¶</a></dt>
 <dd><p>Applies a NumPy array of torques and returns the final applied torque
 (after gravity compensation, if used).</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="polysim.envs.bullet_manipulator.BulletManipulatorEnv.compute_forward_kinematics">
-<span class="sig-name descname"><span class="pre">compute_forward_kinematics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_pos</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.bullet_manipulator.BulletManipulatorEnv.compute_forward_kinematics" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">compute_forward_kinematics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_pos</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.bullet_manipulator.BulletManipulatorEnv.compute_forward_kinematics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes forward kinematics.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -436,14 +439,14 @@ the rest position). Therefore, drastically modifies simulation state!</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="polysim.envs.bullet_manipulator.BulletManipulatorEnv.compute_inverse_dynamics">
-<span class="sig-name descname"><span class="pre">compute_inverse_dynamics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_pos</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_vel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_acc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.bullet_manipulator.BulletManipulatorEnv.compute_inverse_dynamics" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">compute_inverse_dynamics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_pos</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_vel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_acc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.bullet_manipulator.BulletManipulatorEnv.compute_inverse_dynamics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes inverse dynamics by returning the torques necessary to get the desired accelerations
 at the given joint position and velocity.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="polysim.envs.bullet_manipulator.BulletManipulatorEnv.compute_inverse_kinematics">
-<span class="sig-name descname"><span class="pre">compute_inverse_kinematics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_position</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_orientation</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.bullet_manipulator.BulletManipulatorEnv.compute_inverse_kinematics" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">compute_inverse_kinematics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_orientation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.bullet_manipulator.BulletManipulatorEnv.compute_inverse_kinematics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes inverse kinematics.</p>
 <p>Uses PyBullet to compute inverse kinematics.</p>
 <dl class="field-list simple">
@@ -494,19 +497,19 @@ at the given joint position and velocity.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="polysim.envs.bullet_manipulator.BulletManipulatorEnv.load_robot_description_from_sdf">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">load_robot_description_from_sdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">abs_urdf_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sim</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pybullet_utils.bullet_client.BulletClient</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.bullet_manipulator.BulletManipulatorEnv.load_robot_description_from_sdf" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_robot_description_from_sdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">abs_urdf_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pybullet_utils.bullet_client.BulletClient</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.bullet_manipulator.BulletManipulatorEnv.load_robot_description_from_sdf" title="Permalink to this definition">¶</a></dt>
 <dd><p>Loads a SDF file into the simulation.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="polysim.envs.bullet_manipulator.BulletManipulatorEnv.load_robot_description_from_urdf">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">load_robot_description_from_urdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">abs_urdf_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sim</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pybullet_utils.bullet_client.BulletClient</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.bullet_manipulator.BulletManipulatorEnv.load_robot_description_from_urdf" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_robot_description_from_urdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">abs_urdf_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pybullet_utils.bullet_client.BulletClient</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.bullet_manipulator.BulletManipulatorEnv.load_robot_description_from_urdf" title="Permalink to this definition">¶</a></dt>
 <dd><p>Loads a URDF file into the simulation.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="polysim.envs.bullet_manipulator.BulletManipulatorEnv.reset">
-<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_pos</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_vel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.bullet_manipulator.BulletManipulatorEnv.reset" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_pos</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_vel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#polysim.envs.bullet_manipulator.BulletManipulatorEnv.reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resets simulation to the given pose, or if not given, the default rest pose</p>
 </dd></dl>
 
@@ -522,31 +525,22 @@ at the given joint position and velocity.</p>
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="polysim.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">polysim package</p>
-            </div>
-        </a>
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="polysim.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">polysim package</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="torchcontrol.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">torchcontrol package</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="torchcontrol.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">torchcontrol package</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
@@ -567,8 +561,7 @@ at the given joint position and velocity.</p>
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

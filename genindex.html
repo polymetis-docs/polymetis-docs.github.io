@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index &#8212; Polymetis  documentation</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -25,7 +25,7 @@
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -35,7 +35,10 @@
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -271,7 +274,6 @@
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#N"><strong>N</strong></a>
- | <a href="#O"><strong>O</strong></a>
  | <a href="#P"><strong>P</strong></a>
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
@@ -333,20 +335,16 @@
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="torchcontrol.policies.html#torchcontrol.policies.ee_pd.CartesianImpedanceControl">CartesianImpedanceControl (class in torchcontrol.policies.ee_pd)</a>
-</li>
-      <li><a href="torchcontrol.modules.html#torchcontrol.modules.planning.CartesianSpaceMinJerkJointPlanner">CartesianSpaceMinJerkJointPlanner (class in torchcontrol.modules.planning)</a>
-</li>
-      <li><a href="torchcontrol.modules.html#torchcontrol.modules.planning.CartesianSpaceMinJerkPlanner">CartesianSpaceMinJerkPlanner (class in torchcontrol.modules.planning)</a>
-</li>
       <li><a href="torchcontrol.modules.html#torchcontrol.modules.feedback.CartesianSpacePD">CartesianSpacePD (class in torchcontrol.modules.feedback)</a>
+</li>
+      <li><a href="torchcontrol.modules.html#torchcontrol.modules.feedback.CartesianSpacePDFast">CartesianSpacePDFast (class in torchcontrol.modules.feedback)</a>
 </li>
       <li><a href="polysim.envs.html#polysim.envs.bullet_manipulator.BulletManipulatorEnv.compute_forward_kinematics">compute_forward_kinematics() (polysim.envs.bullet_manipulator.BulletManipulatorEnv method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="polysim.envs.html#polysim.envs.bullet_manipulator.BulletManipulatorEnv.compute_inverse_dynamics">compute_inverse_dynamics() (polysim.envs.bullet_manipulator.BulletManipulatorEnv method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="polysim.envs.html#polysim.envs.bullet_manipulator.BulletManipulatorEnv.compute_inverse_kinematics">compute_inverse_kinematics() (polysim.envs.bullet_manipulator.BulletManipulatorEnv method)</a>
 </li>
       <li><a href="torchcontrol.models.html#torchcontrol.models.torchscript_pinocchio.RobotModelPinocchio.compute_jacobian">compute_jacobian() (torchcontrol.models.torchscript_pinocchio.RobotModelPinocchio method)</a>
@@ -363,9 +361,13 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="polymetis.robot_client.html#polymetis.robot_client.metadata.RobotClientMetadataConfig.default_Kq">default_Kq (polymetis.robot_client.metadata.RobotClientMetadataConfig attribute)</a>
 </li>
+      <li><a href="polymetis.robot_client.html#polymetis.robot_client.metadata.RobotClientMetadataConfig.default_Kqd">default_Kqd (polymetis.robot_client.metadata.RobotClientMetadataConfig attribute)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="polymetis.robot_client.html#polymetis.robot_client.metadata.RobotClientMetadataConfig.default_Kqd">default_Kqd (polymetis.robot_client.metadata.RobotClientMetadataConfig attribute)</a>
+      <li><a href="polymetis.robot_client.html#polymetis.robot_client.metadata.RobotClientMetadataConfig.default_Kx">default_Kx (polymetis.robot_client.metadata.RobotClientMetadataConfig attribute)</a>
+</li>
+      <li><a href="polymetis.robot_client.html#polymetis.robot_client.metadata.RobotClientMetadataConfig.default_Kxd">default_Kxd (polymetis.robot_client.metadata.RobotClientMetadataConfig attribute)</a>
 </li>
       <li><a href="torchcontrol.utils.html#torchcontrol.utils.tensor_utils.diagonalize_gain">diagonalize_gain() (in module torchcontrol.utils.tensor_utils)</a>
 </li>
@@ -400,29 +402,15 @@
       <ul>
         <li><a href="torchcontrol.modules.html#torchcontrol.modules.feedback.CartesianSpacePD.forward">(torchcontrol.modules.feedback.CartesianSpacePD method)</a>
 </li>
+        <li><a href="torchcontrol.modules.html#torchcontrol.modules.feedback.CartesianSpacePDFast.forward">(torchcontrol.modules.feedback.CartesianSpacePDFast method)</a>
+</li>
         <li><a href="torchcontrol.modules.html#torchcontrol.modules.feedback.JointSpacePD.forward">(torchcontrol.modules.feedback.JointSpacePD method)</a>
 </li>
         <li><a href="torchcontrol.modules.html#torchcontrol.modules.feedback.LinearFeedback.forward">(torchcontrol.modules.feedback.LinearFeedback method)</a>
 </li>
-        <li><a href="torchcontrol.modules.html#torchcontrol.modules.feedback.OperationalSpacePD.forward">(torchcontrol.modules.feedback.OperationalSpacePD method)</a>
-</li>
-        <li><a href="torchcontrol.modules.html#torchcontrol.modules.feedback.OperationalSpacePositionPD.forward">(torchcontrol.modules.feedback.OperationalSpacePositionPD method)</a>
-</li>
         <li><a href="torchcontrol.modules.html#torchcontrol.modules.feedforward.Coriolis.forward">(torchcontrol.modules.feedforward.Coriolis method)</a>
 </li>
         <li><a href="torchcontrol.modules.html#torchcontrol.modules.feedforward.InverseDynamics.forward">(torchcontrol.modules.feedforward.InverseDynamics method)</a>
-</li>
-        <li><a href="torchcontrol.modules.html#torchcontrol.modules.planning.CartesianSpaceMinJerkJointPlanner.forward">(torchcontrol.modules.planning.CartesianSpaceMinJerkJointPlanner method)</a>
-</li>
-        <li><a href="torchcontrol.modules.html#torchcontrol.modules.planning.CartesianSpaceMinJerkPlanner.forward">(torchcontrol.modules.planning.CartesianSpaceMinJerkPlanner method)</a>
-</li>
-        <li><a href="torchcontrol.modules.html#torchcontrol.modules.planning.JointSpaceMinJerkPlanner.forward">(torchcontrol.modules.planning.JointSpaceMinJerkPlanner method)</a>
-</li>
-        <li><a href="torchcontrol.policies.html#torchcontrol.policies.ee_pd.CartesianImpedanceControl.forward">(torchcontrol.policies.ee_pd.CartesianImpedanceControl method)</a>
-</li>
-        <li><a href="torchcontrol.policies.html#torchcontrol.policies.ilqr.iLQR.forward">(torchcontrol.policies.ilqr.iLQR method)</a>
-</li>
-        <li><a href="torchcontrol.policies.html#torchcontrol.policies.joint_pd.JointImpedanceControl.forward">(torchcontrol.policies.joint_pd.JointImpedanceControl method)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -513,24 +501,20 @@
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="torchcontrol.policies.html#torchcontrol.policies.ilqr.iLQR.i">i (torchcontrol.policies.ilqr.iLQR attribute)</a>
-</li>
       <li><a href="torchcontrol.transform.html#torchcontrol.transform.rotation.identity">identity() (in module torchcontrol.transform.rotation)</a>
 
       <ul>
         <li><a href="torchcontrol.transform.html#torchcontrol.transform.transformation.identity">(in module torchcontrol.transform.transformation)</a>
 </li>
       </ul></li>
-      <li><a href="torchcontrol.policies.html#torchcontrol.policies.ilqr.iLQR">iLQR (class in torchcontrol.policies.ilqr)</a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="torchcontrol.transform.html#torchcontrol.transform.rotation.RotationObj.inv">inv() (torchcontrol.transform.rotation.RotationObj method)</a>
 
       <ul>
         <li><a href="torchcontrol.transform.html#torchcontrol.transform.transformation.TransformationObj.inv">(torchcontrol.transform.transformation.TransformationObj method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="torchcontrol.models.html#torchcontrol.models.torchscript_pinocchio.RobotModelPinocchio.inverse_dynamics">inverse_dynamics() (torchcontrol.models.torchscript_pinocchio.RobotModelPinocchio method)</a>
 </li>
       <li><a href="torchcontrol.models.html#torchcontrol.models.torchscript_pinocchio.RobotModelPinocchio.inverse_kinematics">inverse_kinematics() (torchcontrol.models.torchscript_pinocchio.RobotModelPinocchio method)</a>
@@ -547,13 +531,9 @@
 </li>
       <li><a href="polymetis.robot_client.html#polymetis.robot_client.metadata.RobotModelConfig.joint_limits_high">joint_limits_high (polymetis.robot_client.metadata.RobotModelConfig attribute)</a>
 </li>
-      <li><a href="polymetis.robot_client.html#polymetis.robot_client.metadata.RobotModelConfig.joint_limits_low">joint_limits_low (polymetis.robot_client.metadata.RobotModelConfig attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="torchcontrol.policies.html#torchcontrol.policies.joint_pd.JointImpedanceControl">JointImpedanceControl (class in torchcontrol.policies.joint_pd)</a>
-</li>
-      <li><a href="torchcontrol.modules.html#torchcontrol.modules.planning.JointSpaceMinJerkPlanner">JointSpaceMinJerkPlanner (class in torchcontrol.modules.planning)</a>
+      <li><a href="polymetis.robot_client.html#polymetis.robot_client.metadata.RobotModelConfig.joint_limits_low">joint_limits_low (polymetis.robot_client.metadata.RobotModelConfig attribute)</a>
 </li>
       <li><a href="torchcontrol.modules.html#torchcontrol.modules.feedback.JointSpacePD">JointSpacePD (class in torchcontrol.modules.feedback)</a>
 </li>
@@ -578,8 +558,6 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="torchcontrol.transform.html#torchcontrol.transform.rotation.RotationObj.magnitude">magnitude() (torchcontrol.transform.rotation.RotationObj method)</a>
-</li>
-      <li><a href="torchcontrol.modules.html#torchcontrol.modules.planning.min_jerk_spaces">min_jerk_spaces() (in module torchcontrol.modules.planning)</a>
 </li>
       <li>
     module
@@ -625,15 +603,7 @@
 </li>
         <li><a href="torchcontrol.modules.html#module-torchcontrol.modules.feedforward">torchcontrol.modules.feedforward</a>
 </li>
-        <li><a href="torchcontrol.modules.html#module-torchcontrol.modules.planning">torchcontrol.modules.planning</a>
-</li>
         <li><a href="torchcontrol.policies.html#module-torchcontrol.policies">torchcontrol.policies</a>
-</li>
-        <li><a href="torchcontrol.policies.html#module-torchcontrol.policies.ee_pd">torchcontrol.policies.ee_pd</a>
-</li>
-        <li><a href="torchcontrol.policies.html#module-torchcontrol.policies.ilqr">torchcontrol.policies.ilqr</a>
-</li>
-        <li><a href="torchcontrol.policies.html#module-torchcontrol.policies.joint_pd">torchcontrol.policies.joint_pd</a>
 </li>
         <li><a href="torchcontrol.transform.html#module-torchcontrol.transform">torchcontrol.transform</a>
 </li>
@@ -659,18 +629,6 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="polymetis.robot_client.html#polymetis.robot_client.metadata.RobotModelConfig.num_dofs">num_dofs (polymetis.robot_client.metadata.RobotModelConfig attribute)</a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="O">O</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="torchcontrol.modules.html#torchcontrol.modules.feedback.OperationalSpacePD">OperationalSpacePD (class in torchcontrol.modules.feedback)</a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="torchcontrol.modules.html#torchcontrol.modules.feedback.OperationalSpacePositionPD">OperationalSpacePositionPD (class in torchcontrol.modules.feedback)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -784,8 +742,6 @@
       </ul></li>
       <li><a href="polymetis.html#polymetis.robot_interface.RobotInterface.pose_ee">pose_ee() (polymetis.robot_interface.RobotInterface method)</a>
 </li>
-      <li><a href="torchcontrol.modules.html#torchcontrol.modules.planning.PositionMinJerkPlanner">PositionMinJerkPlanner (class in torchcontrol.modules.planning)</a>
-</li>
   </ul></td>
 </tr></table>
 
@@ -852,6 +808,8 @@
 </li>
       <li><a href="polysim.html#polysim.grpc_sim_client.Spinner">Spinner (class in polysim.grpc_sim_client)</a>
 </li>
+      <li><a href="torchcontrol.utils.html#torchcontrol.utils.tensor_utils.stack_trajectory">stack_trajectory() (in module torchcontrol.utils.tensor_utils)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -905,42 +863,14 @@
 </li>
       </ul></li>
       <li>
-    torchcontrol.modules.planning
-
-      <ul>
-        <li><a href="torchcontrol.modules.html#module-torchcontrol.modules.planning">module</a>
-</li>
-      </ul></li>
-      <li>
     torchcontrol.policies
 
       <ul>
         <li><a href="torchcontrol.policies.html#module-torchcontrol.policies">module</a>
 </li>
       </ul></li>
-      <li>
-    torchcontrol.policies.ee_pd
-
-      <ul>
-        <li><a href="torchcontrol.policies.html#module-torchcontrol.policies.ee_pd">module</a>
-</li>
-      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li>
-    torchcontrol.policies.ilqr
-
-      <ul>
-        <li><a href="torchcontrol.policies.html#module-torchcontrol.policies.ilqr">module</a>
-</li>
-      </ul></li>
-      <li>
-    torchcontrol.policies.joint_pd
-
-      <ul>
-        <li><a href="torchcontrol.policies.html#module-torchcontrol.policies.joint_pd">module</a>
-</li>
-      </ul></li>
       <li>
     torchcontrol.transform
 
@@ -1012,13 +942,8 @@
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
 </div>
         
         </div>
@@ -1039,8 +964,7 @@
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

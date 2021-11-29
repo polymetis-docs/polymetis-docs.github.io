@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>torchcontrol.transform package &#8212; Polymetis  documentation</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -25,7 +25,7 @@
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -37,7 +37,10 @@
     <link rel="next" title="torchcontrol.utils package" href="torchcontrol.utils.html" />
     <link rel="prev" title="torchcontrol.policies package" href="torchcontrol.policies.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -315,7 +318,7 @@
 <span id="torchcontrol-transform-rotation-module"></span><h2>torchcontrol.transform.rotation module<a class="headerlink" href="#module-torchcontrol.transform.rotation" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="torchcontrol.transform.rotation.RotationObj">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">torchcontrol.transform.rotation.</span></span><span class="sig-name descname"><span class="pre">RotationObj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.transform.rotation.RotationObj" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torchcontrol.transform.rotation.</span></span><span class="sig-name descname"><span class="pre">RotationObj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.transform.rotation.RotationObj" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A scriptable rotation object used for storing &amp; manipulating rotations in 3D space.
 The API is similar to that of scipy.spatial.transform.Rotation.</p>
@@ -407,7 +410,7 @@ The API is similar to that of scipy.spatial.transform.Rotation.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="torchcontrol.transform.rotation.from_matrix">
-<span class="sig-prename descclassname"><span class="pre">torchcontrol.transform.rotation.</span></span><span class="sig-name descname"><span class="pre">from_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchcontrol.transform.rotation.RotationObj" title="torchcontrol.transform.rotation.RotationObj"><span class="pre">torchcontrol.transform.rotation.RotationObj</span></a></span></span><a class="headerlink" href="#torchcontrol.transform.rotation.from_matrix" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">torchcontrol.transform.rotation.</span></span><span class="sig-name descname"><span class="pre">from_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchcontrol.transform.rotation.RotationObj" title="torchcontrol.transform.rotation.RotationObj"><span class="pre">torchcontrol.transform.rotation.RotationObj</span></a></span></span><a class="headerlink" href="#torchcontrol.transform.rotation.from_matrix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a rotation object from a rotation matrix</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -421,7 +424,7 @@ The API is similar to that of scipy.spatial.transform.Rotation.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="torchcontrol.transform.rotation.from_quat">
-<span class="sig-prename descclassname"><span class="pre">torchcontrol.transform.rotation.</span></span><span class="sig-name descname"><span class="pre">from_quat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quat</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchcontrol.transform.rotation.RotationObj" title="torchcontrol.transform.rotation.RotationObj"><span class="pre">torchcontrol.transform.rotation.RotationObj</span></a></span></span><a class="headerlink" href="#torchcontrol.transform.rotation.from_quat" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">torchcontrol.transform.rotation.</span></span><span class="sig-name descname"><span class="pre">from_quat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchcontrol.transform.rotation.RotationObj" title="torchcontrol.transform.rotation.RotationObj"><span class="pre">torchcontrol.transform.rotation.RotationObj</span></a></span></span><a class="headerlink" href="#torchcontrol.transform.rotation.from_quat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a rotation object from a quaternion</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -435,7 +438,7 @@ The API is similar to that of scipy.spatial.transform.Rotation.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="torchcontrol.transform.rotation.from_rotvec">
-<span class="sig-prename descclassname"><span class="pre">torchcontrol.transform.rotation.</span></span><span class="sig-name descname"><span class="pre">from_rotvec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rotvec</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchcontrol.transform.rotation.RotationObj" title="torchcontrol.transform.rotation.RotationObj"><span class="pre">torchcontrol.transform.rotation.RotationObj</span></a></span></span><a class="headerlink" href="#torchcontrol.transform.rotation.from_rotvec" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">torchcontrol.transform.rotation.</span></span><span class="sig-name descname"><span class="pre">from_rotvec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rotvec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchcontrol.transform.rotation.RotationObj" title="torchcontrol.transform.rotation.RotationObj"><span class="pre">torchcontrol.transform.rotation.RotationObj</span></a></span></span><a class="headerlink" href="#torchcontrol.transform.rotation.from_rotvec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a rotation object from a rotation vector</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -466,14 +469,14 @@ The API is similar to that of scipy.spatial.transform.Rotation.</p>
 <span id="torchcontrol-transform-transformation-module"></span><h2>torchcontrol.transform.transformation module<a class="headerlink" href="#module-torchcontrol.transform.transformation" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="torchcontrol.transform.transformation.TransformationObj">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">torchcontrol.transform.transformation.</span></span><span class="sig-name descname"><span class="pre">TransformationObj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rotation</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#torchcontrol.transform.rotation.RotationObj" title="torchcontrol.transform.rotation.RotationObj"><span class="pre">torchcontrol.transform.rotation.RotationObj</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">translation</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.transform.transformation.TransformationObj" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torchcontrol.transform.transformation.</span></span><span class="sig-name descname"><span class="pre">TransformationObj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rotation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#torchcontrol.transform.rotation.RotationObj" title="torchcontrol.transform.rotation.RotationObj"><span class="pre">torchcontrol.transform.rotation.RotationObj</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">translation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.transform.transformation.TransformationObj" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A scriptable transformation object used for storing &amp; manipulating transformations in 3D space.
 A transformation consists of a translation and a rotation.</p>
 <p>Quaternions follow the convention of &lt;x, y, z, w&gt;.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="torchcontrol.transform.transformation.TransformationObj.apply">
-<span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.transform.transformation.TransformationObj.apply" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#torchcontrol.transform.transformation.TransformationObj.apply" title="Permalink to this definition">¶</a></dt>
 <dd><p>Applies the transformation to a vector
 tf.apply(v) = tf.rotation().apply(v) + tf.translation</p>
 </dd></dl>
@@ -524,7 +527,7 @@ tf.apply(v) = tf.rotation().apply(v) + tf.translation</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="torchcontrol.transform.transformation.from_matrix">
-<span class="sig-prename descclassname"><span class="pre">torchcontrol.transform.transformation.</span></span><span class="sig-name descname"><span class="pre">from_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchcontrol.transform.transformation.TransformationObj" title="torchcontrol.transform.transformation.TransformationObj"><span class="pre">torchcontrol.transform.transformation.TransformationObj</span></a></span></span><a class="headerlink" href="#torchcontrol.transform.transformation.from_matrix" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">torchcontrol.transform.transformation.</span></span><span class="sig-name descname"><span class="pre">from_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchcontrol.transform.transformation.TransformationObj" title="torchcontrol.transform.transformation.TransformationObj"><span class="pre">torchcontrol.transform.transformation.TransformationObj</span></a></span></span><a class="headerlink" href="#torchcontrol.transform.transformation.from_matrix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a translation object from a translation vector and a rotation object</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -538,7 +541,7 @@ tf.apply(v) = tf.rotation().apply(v) + tf.translation</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="torchcontrol.transform.transformation.from_rot_xyz">
-<span class="sig-prename descclassname"><span class="pre">torchcontrol.transform.transformation.</span></span><span class="sig-name descname"><span class="pre">from_rot_xyz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rotation</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#torchcontrol.transform.rotation.RotationObj" title="torchcontrol.transform.rotation.RotationObj"><span class="pre">torchcontrol.transform.rotation.RotationObj</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">translation</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchcontrol.transform.transformation.TransformationObj" title="torchcontrol.transform.transformation.TransformationObj"><span class="pre">torchcontrol.transform.transformation.TransformationObj</span></a></span></span><a class="headerlink" href="#torchcontrol.transform.transformation.from_rot_xyz" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">torchcontrol.transform.transformation.</span></span><span class="sig-name descname"><span class="pre">from_rot_xyz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rotation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#torchcontrol.transform.rotation.RotationObj" title="torchcontrol.transform.rotation.RotationObj"><span class="pre">torchcontrol.transform.rotation.RotationObj</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">translation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#torchcontrol.transform.transformation.TransformationObj" title="torchcontrol.transform.transformation.TransformationObj"><span class="pre">torchcontrol.transform.transformation.TransformationObj</span></a></span></span><a class="headerlink" href="#torchcontrol.transform.transformation.from_rot_xyz" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a translation object from a translation vector and a a rotation object</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -574,31 +577,22 @@ tf.apply(v) = tf.rotation().apply(v) + tf.translation</p>
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="torchcontrol.policies.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">torchcontrol.policies package</p>
-            </div>
-        </a>
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="torchcontrol.policies.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">torchcontrol.policies package</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="torchcontrol.utils.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">torchcontrol.utils package</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="torchcontrol.utils.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">torchcontrol.utils package</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
@@ -619,8 +613,7 @@ tf.apply(v) = tf.rotation().apply(v) + tf.translation</p>
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
