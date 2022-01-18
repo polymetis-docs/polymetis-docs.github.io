@@ -383,8 +383,11 @@ launch_robot.py <span class="nv">robot_client</span><span class="o">=</span>fran
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>launch_gripper.py <span class="nv">gripper</span><span class="o">=</span>&lt;franka_hand<span class="p">|</span>robotiq_2f&gt;
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">launch_gripper.py</span></code> launches a service that exposes gripper functionality to a connected <code class="docutils literal notranslate"><span class="pre">GripperInterface</span></code>.
-See <a class="reference external" href="https://polymetis-docs.github.io/usage.html">docs</a> for usage instructions.</p>
+<p><code class="docutils literal notranslate"><span class="pre">launch_gripper.py</span></code> launches a service that exposes gripper functionality to a connected <code class="docutils literal notranslate"><span class="pre">GripperInterface</span></code>.</p>
+<p>You can modify the configuration on the command line through Hydra. For example, to change the comport (communication port) while using the <a class="reference external" href="https://github.com/facebookresearch/fairo/blob/main/polymetis/polymetis/conf/gripper/robotiq_2f.yaml">Robotiq 2F gripper config</a>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>launch_gripper.py <span class="nv">gripper</span><span class="o">=</span>robotiq_2f gripper.comport<span class="o">=</span>/dev/ttyUSB1
+</pre></div>
+</div>
 </div>
 </div>
 
