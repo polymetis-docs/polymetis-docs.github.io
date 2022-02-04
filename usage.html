@@ -440,6 +440,11 @@ launch_robot.py <span class="nv">robot_client</span><span class="o">=</span>fran
 </pre></div>
 </div>
 <p>For hardware, <code class="docutils literal notranslate"><span class="pre">use_real_time</span></code> acquires the necessary <code class="docutils literal notranslate"><span class="pre">sudo</span></code> rights for real-time optimizations (see <a class="reference external" href="https://github.com/facebookresearch/fairo/blob/main/polymetis/polymetis/include/real_time.hpp">here</a> for the specific optimizations.)</p>
+<p>For debugging and calibration purposes, we provide a read-only mode for the robot client, where no torques will be applied to the robot but robot states are still recorded normally. To launch the robot client in read-only mode:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On the NUC</span>
+launch_robot.py <span class="nv">robot_client</span><span class="o">=</span>franka_hardware robot_client.executable_cfg.readonly<span class="o">=</span><span class="nb">true</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="running-user-code-controllers-on-your-machine">
 <h3>Running user-code controllers <strong>on your machine</strong>:<a class="headerlink" href="#running-user-code-controllers-on-your-machine" title="Permalink to this headline">¶</a></h3>
